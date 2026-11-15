@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "key": "A",
+    "start": 3,
+    "top": 38.44449999999995,
+    "name": "Đăng ký học phần",
+    "heading": "Bài 2",
+    "headingNumber": "2",
+    "assignment": "automatic",
+    "end": 4,
+    "bottom": null,
+    "confidence": "title-heading"
+  },
+  "pdfPageCount": 7,
+  "source": "shared PDF"
+}

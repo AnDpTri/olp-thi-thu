@@ -1,0 +1,6 @@
+﻿BLOCKED: no final screenshots were captured or viewed.
+Both isolated VS Code capture launches exited before a window/extension host existed.
+Electron: Sandboxed processes cannot read the installed VS Code directory; Windows denies the sandbox token access. CreateFile: Access is denied (0x5).
+See ../verification-0.6.0.txt and ../test-screenshots-main-0.6.0.log / ../test-screenshots-urgent-0.6.0.log.
+Pending at BOTH 1366x768 and 1920x1080: PDF+code+IO, no PDF, failing samples/diff, submissions+scoreboard, final-five-minute status.
+No visual acceptance or screenshot-driven fixes are claimed.

@@ -1,0 +1,1 @@
+﻿const {renderDirect}=require('./olp-vscode/pdf-reader');renderDirect('outputs/De-OLP-2024-Khong-chuyen.pdf',{key:'A',name:'Đăng ký học phần',pages:{start:3,end:4,top:38.4445}},[]).then(r=>console.log('Direct PDF render PASS',r.images.map(x=>[x.number,x.uri.length]))).catch(e=>{console.error(e);process.exitCode=1;});

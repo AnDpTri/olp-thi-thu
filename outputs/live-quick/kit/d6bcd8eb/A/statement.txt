@@ -1,0 +1,39 @@
+[Trang 3]
+Bài 2. ĐĂNG KÝ HỌC PHẦN (100 điểm)
+Bờm đang thực hiện đăng ký học phần cho khóa học tiếp theo và cậu cũng có kế hoạch rút ngắn
+thời gian học bằng cách đăng ký nhiều tín chỉ nhất cho từng khóa học. Danh sách gồm có n môn
+học, môn học thứ i có độ khó a_{i} và số tín chỉ b_{i}.
+Để tiến độ học tập theo đúng kế hoạch, Bờm cần chọn đăng ký học các môn sao cho tổng số tín
+chỉ không được ít hơn C. Bên cạnh đó, để đảm bảo hiệu quả học tập, các môn phải được chọn
+học theo trình tự có độ biến động của khóa học là nhỏ nhất. Độ biến động của khóa học được
+định nghĩa là giá trị chênh lệch độ khó lớn nhất giữa hai môn học liền kề. Cụ thể, nếu đăng ký
+học m môn theo trình tự i_{1}, i_{2}, …, i_{m} thì giá trị độ biến động được tính theo công thức:
+max( a_{i1} − a_{i2} , a_{i2} − a_{i3} , …, a_{im−1} − a_{im} )
+Yêu cầu: Hãy giúp Bờm chọn đăng ký các môn học sao cho tổng số tín chỉ không ít hơn C và có
+độ biến động là nhỏ nhất.
+Dữ liệu: Vào từ thiết bị vào chuẩn có dạng:
+• Dòng đầu tiên chứa 2 số nguyên n, C(1 ≤ n ≤ 2 × 10^{5}; 1 ≤ C ≤ 10^{9}) – số lượng
+môn học và tổng số tín chỉ tối thiểu phải đăng ký;
+• Dòng thứ hai chứa dãy số a_{1}, a_{2}, …, a_{n}(1 ≤ a_{i} ≤ 10^{9}) – độ khó của các môn học;
+• Dòng thứ ba chứa dãy số b_{1}, b_{2}, …, b_{n}(1 ≤ b_{i} ≤ 10^{9}) – số tín chỉ của các môn học;
+• Dữ liệu đảm bảo C không vượt quá tổng số tín chỉ của tất cả n môn học.
+Kết quả: Ghi ra thiết bị ra chuẩn một số nguyên là độ biến động nhỏ nhất của danh sách các môn
+học có tổng số tín chỉ không ít hơn C.
+Ví dụ mẫu:
+Dữ liệu vào Kết quả Giải thích
+5 10 1 Chọn các môn theo trình tự: (3,5,2) có
+8 3 1 5 2 tổng số tín chỉ 11 và độ biến động 1.
+6 4 2 6 5
+5 15 2 Chọn các môn theo trình tự: (3,5,2,4)
+8 3 1 5 2 có tổng số tín chỉ 17 và độ biến động 2.
+6 4 2 6 5
+Ràng buộc:
+• Subtask 1 (25% số điểm): n ≤ 100;
+• Subtask 2 (15% số điểm): n ≤ 1000;
+• Subtask 3 (20% số điểm): b_{i} = 1; n ≤ 10^{5};
+• Subtask 4 (20% số điểm): a_{i} ≤ 30; n ≤ 10^{5};
+Trang 3/4
+
+[Trang 4]
+• Subtask 5 (20% số điểm): không ràng buộc gì thêm.
+Trang 4/4

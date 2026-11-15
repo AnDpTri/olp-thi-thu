@@ -1,0 +1,52 @@
+0.7.0 supervisor round 2 follow-up
+
+Product: Run/sample completion only called trackFocus(), which observes focus
+but does not restore keyboard focus. The working layout showed the source but
+did not explicitly focus its editor widget after returning from a webview.
+The exact previously focused widget cannot be determined from activeTextEditor
+alone or from the preserved log. No claim is made that the output channel took
+focus. The fix explicitly shows the source in group 1 and executes
+workbench.action.focusActiveEditorGroup. Run/sample finally paths restore it,
+including compile errors and early returns. Layout/statement return uses the
+same focus helper. No-sample command completion also restores source focus.
+
+Product: combined WorkspaceEdit text replacement + setEndOfLine caused the
+intermediate CRLF output edit. Output now writes LF bytes to disk once and
+awaits clean-buffer reload (bounded five seconds); no editor EOL conversion or
+second write. The matching reload is recorded as generated. A user edit while
+waiting is preserved. Failure to reload is reported rather than silently ignored.
+
+Test: previously unchecked typing could miss the source and fail much later at
+the sample verdict. Every type helper now opens source/input through the product
+command, asserts its active document, and checks the exact resulting text. The
+suite asserts source/group immediately after statement return and Run/samples,
+before any helper can repair focus. It checks one generated output edit for the
+first run, and gives a direct expected-SAI diagnostic. Crash typing also uses
+the checked helper. State/log-tail dumps are retained.
+
+Executed locally:
+HOST unit-v7 PASS
+  layout-view model PASS 9
+  process-boundary PASS 10
+  v7 pure PASS 12
+HOST replay PASS
+  replay.js VERIFY PASS
+  Python independent ZIP + replay PASS
+HOST unit-submit PASS
+  tat ca 15 kiem thu dat (Vietnamese original line in host log)
+Core --pure: all 10 pass; NOT RUN: 9 process execution checks (--pure)
+JavaScript syntax PASS 33 files
+PowerShell runner syntax PASS
+VSIX source integrity PASS; submit.js byte-identical to 0.5.1 PASS
+
+Regenerated synthetic sample export via the real export path:
+outputs/sample-export-0.7.0/ and outputs/sample-export-0.7.0.zip
+Rebuilt outputs/olp-thi-thu-0.7.0.vsix
+SHA256 ed53ea82fbf56bee305d24f9e4be324fef40ae62911efacb5308526f4ab4348b
+
+Not executed here: VS Code host/UI tests, real child-process compile/run, or new
+screenshots. Await supervisor. The prior round's 13 PASS results belong to the
+prior package. Run v7-main first, then the ordered HOST-TESTS.md commands; shared
+focus/output changes warrant v6-main, practice and screenshots-main regression.
+Preserved round1/round2 logs and e2e directories are untouched. No installation,
+credential access, live submission script, live VNOJ POST or sub-agent used.

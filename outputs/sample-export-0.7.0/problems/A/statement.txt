@@ -1,0 +1,4 @@
+[Trang 1]
+Problem A. Synthetic addition
+SYNTHETIC demonstration, not a real contest submission.
+Read two integers; print their sum.

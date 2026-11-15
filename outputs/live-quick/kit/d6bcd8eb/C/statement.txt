@@ -1,0 +1,21 @@
+[Trang 5]
+Bài 3. BA SỐ NGUYÊN TỐ (100 điểm)
+Cho 2 số nguyên n và k. Tìm số nguyên m lớn nhất thoả mãn các điều kiện sau:
+• m ≤ n;
+• Trong phân tích thừa số nguyên tố của m có đúng ba số nguyên tố liên tiếp. Cụ thể,
+m = p_{1}^{t1} × p_{2}^{t2} × p_{3}^{t3}, với p_{1}, p_{2}, p_{3} là ba số nguyên tố liên tiếp và t_{1}, t_{2}, t_{3} ≥ 1;
+• Số lượng các ước của m đúng bằng k.
+Yêu cầu: Bạn hãy tìm số nguyên m thoả mãn yêu cầu đề bài. Dữ liệu vào đảm bảo luôn tồn tại
+kết quả.
+Dữ liệu: Vào từ thiết bị vào chuẩn gồm một dòng chứa hai số nguyên n và
+k (1 ≤ n ≤ 10^{18}; 8 ≤ k ≤ 2700).
+Kết quả: Ghi ra thiết bị ra chuẩn một số nguyên m là kết quả của bài toán.
+Ví dụ mẫu:
+Dữ liệu vào Kết quả
+32 8 30
+110 8 105
+Ràng buộc:
+• Subtask 1 (20% số điểm): n ≤ 10^{6};
+• Subtask 2 (30% số điểm): k ≤ 24;
+• Subtask 3 (30% số điểm): k ≤ 400;
+• Subtask 4 (20% số điểm): Không có ràng buộc gì thêm.

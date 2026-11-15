@@ -1,0 +1,73 @@
+0.7.0 final export-format revision: schema 2
+
+1. One observed timing model drives summary.json, summary.md, report.md,
+   in-VS Code written/copied report and problem-tree total. Integer ms, displayed
+   HH:MM:SS.mmm. Categories sum to problem total; problems + unassigned = elapsed.
+   Legacy phase-click events remain journal evidence, not measured time inputs.
+2. Manifest session: limitMs, elapsedMs, startedAt, endedAt, endReason.
+3. Identical shared PDFs stored once under statement/full.pdf. Each problem has
+   statement.json with source/pages/crop/confidence/heading/assignment/warnings.
+4. PDF text joins glyph runs by geometry, with superscript/subscript notation.
+   Real A title and 2 x 10^{5} checked (actual text uses multiplication sign).
+   Old cached text is refreshed on export without losing manual page ranges.
+   PNG/PDF rendering is authoritative; text is a convenience.
+5. Short README_AGENT.md + detailed SCHEMA.md. Both batch and per-test counts.
+6. Identity/result metadata in manifest + summary. Per-sample provenance and
+   imported/current hashes distinguish unchanged imported samples from edits.
+   Legacy provenance remains unknown; numeric best score remains null if unknown.
+7. Empty files omitted and described in metadata, including implicit empty blobs.
+   Named run folders; one meta.json includes compilation. Unchanged templates
+   have only code-history index explanation; raw checkpoints remain complete.
+8. Readable timeline and per-problem worklogs, state-flip collapse, edit previews
+   up to 300 UTF-16 units for BOTH inserted and removed text. Raw logs complete.
+9. In-session replay example, exact submission-source and snapshot-list commands
+   in both standalone tools. Vietnamese names transliterated without split words.
+10. Notes/laps/stuck records include full text, problem and observed phase.
+
+Updated unit tests, check-export-v2.js, verify-export-v7.py, host report/archive
+assertions, isolated practice runner context exposure, README and HOST-TESTS.md.
+The sample unpacked deliverable is checked against its manifest: no stale files.
+Only obsolete generated files inside outputs/sample-export-0.7.0 were removed;
+work/e2e and all earlier evidence/leftovers remain untouched.
+
+Executed locally:
+HOST unit-v7 PASS
+  layout-view model PASS 9
+  process-boundary PASS 10
+  v7 pure PASS 16
+HOST replay PASS
+  replay.js VERIFY PASS
+  Python independent ZIP + replay PASS
+HOST unit-submit PASS (all 15 checks)
+Core --pure: all 10 checks; NOT RUN: 9 process execution checks (--pure)
+JavaScript syntax PASS 40 files
+PowerShell syntax PASS 8 runners
+Python syntax PASS
+Protected modules PASS: submit.js, vnoj.js, imports.js unchanged from round 4
+VSIX source integrity PASS; submit.js byte-identical to 0.5.1 PASS
+Generated sample exact file index PASS
+
+Format-only conversion of a COPY of the real round-4 archive:
+real archive schema-2 conversion PASS
+oldBytes=2463664, newBytes=1655531, pdfCopies=1 (conversion before the last small
+metadata-reference size addition; original evidence unchanged).
+Real archive Python verify + submission sources + snapshot listing PASS
+This is not a new host/UI run; it validates export/replay compatibility on real
+recordings in scratch work/export-compat-v2-* directories.
+
+Deliverables rebuilt:
+outputs/olp-thi-thu-0.7.0.vsix
+SHA256 d9048f7947590f17d6ab63f2b6ebe9e81e2defe3c9dbde80c33c30421e219cc4
+outputs/sample-export-0.7.0/ and outputs/sample-export-0.7.0.zip (SYNTHETIC)
+
+Await supervisor: rerun all fourteen ordered HOST-TESTS.md commands. Prior round
+4's fourteen PASS results belong to the previous package. Host v7 now asserts
+archive structure, all hashes/no empty files, shared PDF reference, actual PDF
+text, provenance, integer-ms conservation, report/summary equality, clipboard
+report == written report == ZIP report, run metadata, note phases and replay.
+No VS Code windows, real compiler children or new screenshots were run here.
+No installation, credentials lookup, real VNOJ sign-in/POST, live script or agents.
+
+Known limits: PDF text cannot fully preserve complex 2D math/tables; use PNG/PDF.
+Old sessions lack pre-upgrade monitoring/provenance. Activity remains self-recorded
+focus/idle/outside proxies, not proof of attention. Unavailable fields are explicit.

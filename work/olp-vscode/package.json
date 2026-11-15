@@ -1,0 +1,570 @@
+{
+  "name": "olp-practice",
+  "displayName": "OLP Thi thử",
+  "description": "Thi thử OLP trong VS Code: tải đề VNOJ, bố cục code | input | output | đề, chạy và chạy test mẫu, nộp một cú bấm, đồng hồ và báo cáo.",
+  "version": "0.7.0",
+  "publisher": "olp-local",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "extensionKind": [
+    "ui"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "capabilities": {
+    "virtualWorkspaces": false,
+    "untrustedWorkspaces": {
+      "supported": false
+    }
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "olp",
+          "title": "OLP Thi thử",
+          "icon": "clock.svg"
+        }
+      ]
+    },
+    "views": {
+      "olp": [
+        {
+          "id": "olp.session",
+          "name": "Phiên thi thử"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "olp.import",
+        "title": "Tải đề VNOJ",
+        "category": "OLP",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "olp.companion",
+        "title": "Nhận đề từ Competitive Companion",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.local",
+        "title": "Chuẩn bị phiên ngoại tuyến A–D",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.start",
+        "title": "Bắt đầu phiên thi",
+        "category": "OLP",
+        "icon": "$(play)"
+      },
+      {
+        "command": "olp.end",
+        "title": "Kết thúc phiên",
+        "category": "OLP",
+        "icon": "$(debug-stop)"
+      },
+      {
+        "command": "olp.statement",
+        "title": "Mở đề",
+        "category": "OLP",
+        "icon": "$(book)"
+      },
+      {
+        "command": "olp.analysis",
+        "title": "Ghi mốc đọc / phân tích đề",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.submit",
+        "title": "Nộp bài lên VNOJ",
+        "category": "OLP",
+        "icon": "$(cloud-upload)"
+      },
+      {
+        "command": "olp.submitBrowser",
+        "title": "Mở trang nộp trên VNOJ",
+        "category": "OLP",
+        "icon": "$(link-external)"
+      },
+      {
+        "command": "olp.login",
+        "title": "Đăng nhập VNOJ",
+        "category": "OLP",
+        "icon": "$(account)"
+      },
+      {
+        "command": "olp.logout",
+        "title": "Đăng xuất VNOJ",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.language",
+        "title": "Chọn lại ngôn ngữ nộp",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.sent",
+        "title": "Ghi đã nộp",
+        "category": "OLP",
+        "icon": "$(pass)"
+      },
+      {
+        "command": "olp.verdict",
+        "title": "Ghi kết quả chấm",
+        "category": "OLP",
+        "icon": "$(checklist)"
+      },
+      {
+        "command": "olp.mark",
+        "title": "Ghi mốc",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.copy",
+        "title": "Sao chép báo cáo Markdown",
+        "category": "OLP",
+        "icon": "$(copy)"
+      },
+      {
+        "command": "olp.history",
+        "title": "Mở báo cáo một phiên",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.menu",
+        "title": "Mở bảng điều khiển",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.quick",
+        "title": "Thi thử ngay (dán link kỳ thi)",
+        "category": "OLP",
+        "icon": "$(rocket)"
+      },
+      {
+        "command": "olp.run",
+        "title": "Chạy với input.txt",
+        "category": "OLP",
+        "icon": "$(play)"
+      },
+      {
+        "command": "olp.runSamples",
+        "title": "Chạy test mẫu",
+        "category": "OLP",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "olp.stop",
+        "title": "Dừng chương trình đang chạy",
+        "category": "OLP",
+        "icon": "$(debug-stop)"
+      },
+      {
+        "command": "olp.addSample",
+        "title": "Lưu input/output hiện tại thành test mẫu",
+        "category": "OLP",
+        "icon": "$(add)"
+      },
+      {
+        "command": "olp.template",
+        "title": "Sửa template lời giải",
+        "category": "OLP",
+        "icon": "$(file-code)"
+      },
+      {
+        "command": "olp.solutionLanguage",
+        "title": "Chọn lại loại tệp lời giải cho bộ đề mới",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.switch",
+        "title": "Chuyển bài (bố cục đầy đủ)",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.layout",
+        "title": "Sắp lại bố cục bài hiện tại",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.stuck",
+        "title": "Ghi mốc đang bị kẹt",
+        "category": "OLP",
+        "icon": "$(warning)"
+      },
+      {
+        "command": "olp.note",
+        "title": "Ghi chú vào nhật ký",
+        "category": "OLP",
+        "icon": "$(note)"
+      },
+      {
+        "command": "olp.diffSample",
+        "title": "Xem khác biệt test mẫu",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.refetch",
+        "title": "Lấy lại kết quả bài nộp",
+        "category": "OLP",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "olp.openSubmission",
+        "title": "Mở bài nộp trên VNOJ",
+        "category": "OLP"
+      },
+      {
+        "command": "olp.export",
+        "title": "Xu?t g?i phi?n (.zip)",
+        "category": "OLP",
+        "icon": "$(package)"
+      },
+      {
+        "command": "olp.assignPages",
+        "title": "G?n trang ?? cho b?i",
+        "category": "OLP",
+        "icon": "$(edit)"
+      },
+      {
+        "command": "olp.commonPages",
+        "title": "M? trang chung",
+        "category": "OLP",
+        "icon": "$(book)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "olp.quick",
+          "when": "view == olp.session && !olp.running",
+          "group": "navigation@0"
+        },
+        {
+          "command": "olp.import",
+          "when": "view == olp.session && !olp.running",
+          "group": "navigation@1"
+        },
+        {
+          "command": "olp.start",
+          "when": "view == olp.session && olp.ready && !olp.running",
+          "group": "navigation@2"
+        },
+        {
+          "command": "olp.end",
+          "when": "view == olp.session && olp.running",
+          "group": "navigation@2"
+        },
+        {
+          "command": "olp.copy",
+          "when": "view == olp.session && olp.hasReport",
+          "group": "navigation@3"
+        },
+        {
+          "command": "olp.companion",
+          "when": "view == olp.session && !olp.running"
+        },
+        {
+          "command": "olp.local",
+          "when": "view == olp.session && !olp.running"
+        },
+        {
+          "command": "olp.history",
+          "when": "view == olp.session && olp.hasReport"
+        },
+        {
+          "command": "olp.login",
+          "when": "view == olp.session && !olp.vnoj",
+          "group": "navigation@4"
+        },
+        {
+          "command": "olp.logout",
+          "when": "view == olp.session && olp.vnoj"
+        },
+        {
+          "command": "olp.language",
+          "when": "view == olp.session && olp.vnoj"
+        },
+        {
+          "command": "olp.template",
+          "when": "view == olp.session"
+        },
+        {
+          "command": "olp.solutionLanguage",
+          "when": "view == olp.session && !olp.running"
+        },
+        {
+          "command": "olp.export",
+          "when": "view == olp.session && olp.hasReport",
+          "group": "navigation@5"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "olp.run",
+          "when": "view == olp.session && viewItem == olp.problem",
+          "group": "inline@1"
+        },
+        {
+          "command": "olp.runSamples",
+          "when": "view == olp.session && viewItem == olp.problem",
+          "group": "inline@2"
+        },
+        {
+          "command": "olp.statement",
+          "when": "view == olp.session && viewItem == olp.problem",
+          "group": "inline@3"
+        },
+        {
+          "command": "olp.submit",
+          "when": "view == olp.session && viewItem == olp.problem && olp.running",
+          "group": "inline@4"
+        },
+        {
+          "command": "olp.verdict",
+          "when": "view == olp.session && viewItem == olp.problem && olp.hasReport",
+          "group": "inline@5"
+        },
+        {
+          "command": "olp.refetch",
+          "when": "view == olp.session && viewItem == olp.pending",
+          "group": "inline@1"
+        },
+        {
+          "command": "olp.addSample",
+          "when": "view == olp.session && viewItem == olp.problem"
+        },
+        {
+          "command": "olp.layout",
+          "when": "view == olp.session && viewItem == olp.problem"
+        },
+        {
+          "command": "olp.submitBrowser",
+          "when": "view == olp.session && viewItem == olp.problem && olp.running"
+        },
+        {
+          "command": "olp.sent",
+          "when": "view == olp.session && viewItem == olp.problem && olp.hasReport"
+        },
+        {
+          "command": "olp.analysis",
+          "when": "view == olp.session && viewItem == olp.problem && olp.running"
+        },
+        {
+          "command": "olp.mark",
+          "when": "view == olp.session && viewItem == olp.problem && olp.running"
+        },
+        {
+          "command": "olp.assignPages",
+          "when": "view == olp.session && viewItem == olp.problem"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "olp.diffSample",
+          "when": "false"
+        },
+        {
+          "command": "olp.refetch",
+          "when": "false"
+        },
+        {
+          "command": "olp.openSubmission",
+          "when": "false"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "olp.run",
+          "when": "resourceFilename in olp.sourceNames && resourceDirname in olp.problemDirs",
+          "group": "navigation@1"
+        },
+        {
+          "command": "olp.runSamples",
+          "when": "resourceFilename in olp.sourceNames && resourceDirname in olp.problemDirs",
+          "group": "navigation@2"
+        },
+        {
+          "command": "olp.submit",
+          "when": "resourceFilename in olp.sourceNames && resourceDirname in olp.problemDirs && olp.running",
+          "group": "navigation@3"
+        },
+        {
+          "command": "olp.statement",
+          "when": "resourceFilename in olp.sourceNames && resourceDirname in olp.problemDirs",
+          "group": "navigation@4"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "olp.session",
+        "contents": "Thi thử trong 3 bước:\n1. Dán link kỳ thi, mở bài A, bắt đầu giờ.\n2. Code bên trái, input/output bên phải. Ctrl+Alt+R chạy · Ctrl+Alt+T chạy test mẫu · Ctrl+Alt+D mở đề · Ctrl+Alt+1…4 đổi bài.\n3. Ctrl+Alt+S nộp lên VNOJ. Hết giờ, báo cáo tự sao chép để dán vào ChatGPT.\n[Thi thử ngay](command:olp.quick)\nHoặc làm từng bước:\n[Tải đề VNOJ](command:olp.import)\n[Nhận từ Competitive Companion](command:olp.companion)\n[Chuẩn bị phiên ngoại tuyến A–D](command:olp.local)\nCần mở một thư mục cục bộ (File → Open Folder)."
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "olp.run",
+        "key": "ctrl+alt+r",
+        "when": "olp.ready"
+      },
+      {
+        "command": "olp.runSamples",
+        "key": "ctrl+alt+t",
+        "when": "olp.ready"
+      },
+      {
+        "command": "olp.submit",
+        "key": "ctrl+alt+s",
+        "when": "olp.running"
+      },
+      {
+        "command": "olp.statement",
+        "key": "ctrl+alt+d",
+        "when": "olp.ready"
+      },
+      {
+        "command": "olp.stuck",
+        "key": "ctrl+alt+k",
+        "when": "olp.running"
+      },
+      {
+        "command": "olp.switch",
+        "key": "ctrl+alt+1",
+        "args": 1,
+        "when": "olp.problemCount >= 1"
+      },
+      {
+        "command": "olp.switch",
+        "key": "ctrl+alt+2",
+        "args": 2,
+        "when": "olp.problemCount >= 2"
+      },
+      {
+        "command": "olp.switch",
+        "key": "ctrl+alt+3",
+        "args": 3,
+        "when": "olp.problemCount >= 3"
+      },
+      {
+        "command": "olp.switch",
+        "key": "ctrl+alt+4",
+        "args": 4,
+        "when": "olp.problemCount >= 4"
+      },
+      {
+        "command": "olp.mark",
+        "key": "ctrl+alt+m",
+        "when": "olp.running"
+      }
+    ],
+    "configuration": {
+      "title": "OLP Thi thử",
+      "properties": {
+        "olp.layout.auto": {
+          "type": "boolean",
+          "default": true,
+          "description": "Khi mở một bài, tự sắp lời giải bên trái, input/output (và đề PDF) bên phải."
+        },
+        "olp.cpp.compiler": {
+          "type": "string",
+          "default": "g++",
+          "scope": "machine-overridable",
+          "description": "Trình biên dịch C++ (tên lệnh hoặc đường dẫn đầy đủ)."
+        },
+        "olp.cpp.flags": {
+          "type": "string",
+          "default": "-std=c++20 -O2 -Wall",
+          "scope": "machine-overridable",
+          "description": "Cờ biên dịch C++ (cách nhau bằng khoảng trắng)."
+        },
+        "olp.c.compiler": {
+          "type": "string",
+          "default": "gcc",
+          "scope": "machine-overridable",
+          "description": "Trình biên dịch C."
+        },
+        "olp.c.flags": {
+          "type": "string",
+          "default": "-std=c17 -O2 -Wall",
+          "scope": "machine-overridable",
+          "description": "Cờ biên dịch C."
+        },
+        "olp.python.command": {
+          "type": "string",
+          "default": "python",
+          "scope": "machine-overridable",
+          "description": "Lệnh chạy Python."
+        },
+        "olp.run.timeoutMs": {
+          "type": "number",
+          "default": 5000,
+          "minimum": 100,
+          "description": "Dừng chương trình nếu chạy quá số mili giây này (khi chạy input.txt và test mẫu)."
+        },
+        "olp.submit.checkSamples": {
+          "type": "boolean",
+          "default": true,
+          "description": "Trước khi nộp, nếu bài có test mẫu mà lần chạy gần nhất cho mã hiện tại chưa đúng hết (hoặc chưa chạy) thì chạy mẫu và hỏi một lần."
+        },
+        "olp.timer.warnings": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "default": [
+            60,
+            30,
+            10,
+            5
+          ],
+          "description": "Báo khi còn bấy nhiêu phút."
+        },
+        "olp.duration": {
+          "type": "number",
+          "default": 180,
+          "minimum": 1,
+          "maximum": 600,
+          "description": "Thời lượng phiên thi, tính bằng phút."
+        },
+        "olp.language": {
+          "type": "string",
+          "enum": [
+            "ask",
+            "cpp",
+            "py",
+            "c",
+            "java"
+          ],
+          "default": "ask",
+          "enumDescriptions": [
+            "Hỏi một lần rồi nhớ",
+            "C++",
+            "Python",
+            "C",
+            "Java"
+          ],
+          "description": "Loại tệp lời giải của bộ đề mới."
+        },
+        "olp.idleSeconds": {
+          "type": "number",
+          "default": 90,
+          "minimum": 1,
+          "description": "Sau s? gi?y kh?ng c? t??ng t?c trong b?i, ghi kh?ng thao t?c; kh?ng theo d?i ngo?i VS Code."
+        },
+        "olp.export.auto": {
+          "type": "boolean",
+          "default": true,
+          "description": "T? xu?t ZIP sau khi k?t th?c/h?t gi?; sao ch?p ???ng d?n ZIP."
+        }
+      }
+    }
+  }
+}

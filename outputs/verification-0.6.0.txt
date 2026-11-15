@@ -1,0 +1,71 @@
+﻿OLP Thi thử 0.6.0 — implementation / verification record
+
+Artifact: outputs/olp-thi-thu-0.6.0.vsix
+SHA256: D58900834FAF92A3F724FF88F270C4C23E2576A80AE265D13DE64B26E41B6E77
+Status: IMPLEMENTATION PACKAGED; REAL HOST AND VISUAL ACCEPTANCE BLOCKED. Do not treat this as an end-to-end verified replacement for 0.5.1.
+
+Kept versus changed
+- Kept the inherited runner/layout/template/session architecture and the existing command/tree/state flows after reading them. No wholesale rewrite was necessary. Rewrote README for 0.6.0.
+- submit.js and vnoj.js remain byte-identical to the 0.5.1 VSIX. No exception or production network change.
+- Hardened sample checks: rerun failed samples before submission; invalidate cached passes when sample data, compiler settings or timeout changes; invalidate on adding a sample. Changed source during checks or the language picker cancels submission instead of posting a stale snapshot.
+- Compiler signatures use the actual saved file and its working directory. Java problems have separate build folders. Save failures stop a run. Compiled-source changes during compilation are detected.
+- Added fallback child termination when Windows taskkill starts but fails, plus a one-shot stop guard for output floods. This fallback kills the owned child; descendants still depend on successful taskkill /T.
+- Made Python's neutral template valid with pass. Serialized opening problems, avoided stale PDF attribution while rendering, restored the actual focused problem/phase after runs, and recorded failed compile/run/sample attempts.
+- End/expiry waits for report delivery. A rejected stored cookie goes directly to the paste box. Editor-title buttons are scoped to kit source filenames AND kit problem directories. Explicit layout works even when automatic layout is disabled.
+- Test scripts now use Windows system tar rather than Git tar, hidden isolated processes, and scoped cleanup fallback if WMI is unavailable. Existing leftovers were retained.
+
+Features represented in source (host/UI behavior remains unverified here)
+1. Reused editor groups: code left; input over output right; local PDF right-top with input/output beside each other below. Ends in code. olp.layout.auto=true.
+2. Run saves and compiles/runs from input.txt, writes actual output.txt, reports time/exit/stderr, diagnostics, timeout/stop. Samples compare ignoring trailing whitespace, show per-sample results and a clickable diff. Add sample saves current input/output. Build files stay in kit/build; PDF-only kits explain missing samples. Journal counts runs, samples and compile errors.
+3. Editor Run / Samples / Submit / Statement buttons; status Run / Submit / scoreboard. Ctrl+Alt+R/T/S/D; Ctrl+Alt+1..4 switch.
+4. Per-language global-storage templates, placeholders ${problem}/${name}/${contest}/${date}/${cursor}; existing nonempty solutions preserved. olp.template opens template.
+5. olp.submit.checkSamples=true; one confirmation if samples still fail; at most one submission POST per click; tree submission times/verdicts/links/best result, scoreboard, re-poll action.
+6. olp.timer.warnings=[60,30,10,5], warning/error clock background at <=10/<=5 minutes, live per-problem time.
+7. olp.quick imports, opens A, offers Start; five recent links, remembered solution language; olp.duration=180.
+8. Local-time report with UTC offset, counters and linked submissions; end/expiry writes, opens beside and copies report.
+9-11. Cookie first and direct paste on rejection; Ctrl+Alt+K stuck mark and free-text olp.note; welcome three steps and shortcuts.
+Settings also include olp.cpp.compiler=g++, olp.cpp.flags=-std=c++20 -O2 -Wall, olp.run.timeoutMs=5000, olp.python.command=python, C compiler/flags and olp.language. README has complete usage/defaults.
+
+Actual final checks
+- node work/test-submit.js: "tất cả 15 kiểm thử đạt" (mock HTTP only).
+- node work/test-olp-core.js --pure: "tất cả 10 kiểm thử đạt"; "NOT RUN: 9 process execution checks (--pure)". Includes comparison, placeholders/cursor, reports at UTC+07:00 and UTC-05:00, old session report, scoreboard, statistics, warnings and duration.
+- node work/test-runner-process.js: "process-boundary PASS 9". Injected child-event boundary checks, not real process execution: missing executable, EPERM, stdin/stdout/stderr, RTE, timeout, abort, taskkill failure fallback, output flood, compile cache.
+- node work/test-layout-view.js: "layout-view model PASS 5". API model only: groups/reuse/focus, PDF column, quiet open, stale rendering, close during render.
+- powershell -NoProfile -ExecutionPolicy Bypass -File work/verify-compiler-smoke.ps1: "compiler smoke PASS 5 (PowerShell process boundary; not the Node runner)". Real G++ program: 42, wrong-answer fixture 43, compile error, runtime exit 7, infinite-loop timeout killed. taskkill /T was denied; direct owned-child termination succeeded.
+- Syntax: "syntax PASS 30 files" (production JS and top-level work JS). extension.js checked again after the final focus change.
+- Packaging: package-olp.py completed; ZIP integrity and root source matches checked. Protected module bytes also matched 0.5.1 and the rebuilt VSIX.
+
+Blocked/failed checks (actual result lines)
+- Full node work/test-olp-core.js: "9 kiểm thử lỗi". Every execution check is blocked by preflight "Node piped child process spawn EPERM". These are not compiler-missing skips and not passing execution tests.
+- run-olp-submit.ps1: "submit no result file".
+- run-olp-integration.ps1: "Test failed in practice (-36863)". Restore phase was not reached.
+- run-olp-v6.ps1 main: "main no result file".
+- run-olp-v6.ps1 migrate: "migrate no result file". Old-state report logic passed pure tests; actual host migration did not run.
+- run-olp-live-mock.ps1 -Scenario ok: "KẾT QUẢ: LỖI ở bước 1". No host step ran.
+- olp-shots.ps1 main and urgent: "VS Code exited before capture". No images captured or viewed. All requested 1366x768 and 1920x1080 scenes (PDF, plain, failing samples/diff, submissions/scoreboard, last five minutes) remain visually unverified. No visual fixes are claimed.
+
+Exact environment blockers
+- Installed Code.exe exits before starting its extension host. Electron log: "Sandboxed processes cannot read C:\Users\andan\AppData\Local\Programs\Microsoft VS Code\69047191fc: its ACL has an entry for an AppContainer package SID but none for ALL APPLICATION PACKAGES, so Windows denies the sandbox token access." Also "CreateFile: Access is denied. (0x5)" and "crash server failed to launch, self-terminating". See work/shots-b1bc869/electron.log and isolated e2e electron.log files.
+- Node child_process with piped stdio throws spawn/spawnSync EPERM. Direct PowerShell compilation works; this does not verify the extension's actual Node runner.
+- Get-CimInstance Win32_Process is denied with HRESULT 0x80041003. Each attempted isolated Code launch exited itself before a window/host existed. No user window/profile was touched. No ACL changes, installation or sandbox bypass attempted.
+- taskkill /T returns Access denied in this sandbox; owned-child direct Kill succeeds. Production has a tested mocked fallback; actual Node fallback execution remains blocked.
+
+Test updates for intentional behavior changes
+- Existing integration flows account for nonempty templates, output.txt starting empty instead of holding expected output, cookie-first option selection and local report time.
+- Added host regression cases for changed sample data and source edits while choosing language. These cases are written but could not execute because the host never launched.
+- Added --pure mode without masking the failing full suite, and explicit environmental errors instead of misleading missing-compiler skips.
+
+Compilers discovered
+- C:\msys64\ucrt64\bin\g++.exe and gcc.exe: MSYS2 16.1.0.
+- Python 3.11.9: C:\Users\andan\AppData\Local\Programs\Python\Python311\python.exe.
+- javac 25.0.4.1: C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin\javac.exe.
+C++ compile/run exercised directly. C, Python and Java runtime execution through the runner was not verified.
+
+Limitations / deviations
+- Required real-host acceptance and screenshots could not be completed. No claim of readable PDF/code columns, button placement, untruncated labels, scoreboard fit, focus correctness or rendered warning colors at either resolution.
+- Actual extension command execution, diagnostics UI, sample diffs, template cursor, submit precheck/polling, quick start, timer UI, auto report delivery and persisted-state restore remain unverified in VS Code. Public-contest GET integration could not start. No real VNOJ login or submission was attempted.
+- Compiler cache does not track local header dependencies; delete the corresponding build .stamp after changing a header (documented in README).
+- Timeout tree cleanup depends on Windows permitting taskkill /T; the fallback can only terminate its owned direct child.
+- Existing PDF bundle is platform-dependent (Windows x64). No extra runtime package was added.
+
+All edits/artifacts stayed in the project root. No git repository initialized; no sub-agents; no credentials inspected; no production POST; no user VS Code installation/profile/window changes; no pre-existing work leftovers deleted.

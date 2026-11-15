@@ -1,0 +1,323 @@
+{
+  "synthetic": true,
+  "legacy": false,
+  "legacyOnly": false,
+  "legacyPrefixMs": 0,
+  "unavailableTimingCategories": [],
+  "durationMs": 30000,
+  "elapsedMs": 30000,
+  "limitMs": 10800000,
+  "timingCoverage": "recorded",
+  "overall": {
+    "totalMs": 30000,
+    "timeMs": {
+      "statement": 4000,
+      "code": 17000,
+      "input": 0,
+      "output": 0,
+      "other-file": 0,
+      "none": 1000,
+      "outside": 5000,
+      "idle": 3000
+    },
+    "milestones": {
+      "A:first_statement": 1000,
+      "A:first_keystroke": 6000,
+      "A:first_compile": 7300,
+      "A:first_clean_compile": 7300,
+      "A:first_sample_pass": 8200,
+      "A:first_submission": 22000,
+      "A:first_AC": 24000
+    },
+    "laps": [
+      {
+        "t": 21000,
+        "problem": "A",
+        "phase": "code",
+        "label": "Synthetic lap: reviewed the boundary input"
+      }
+    ],
+    "runs": 1,
+    "sampleRuns": {
+      "pass": 1,
+      "fail": 0
+    },
+    "sampleResults": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "verdicts": {
+        "ĐÚNG": 1
+      }
+    },
+    "compileErrors": 0,
+    "submissions": [
+      {
+        "t": 22000,
+        "id": "1000",
+        "url": "https://oj.vnoi.info/submission/1000",
+        "language": "C++20"
+      }
+    ],
+    "verdicts": [
+      {
+        "t": 24000,
+        "id": "1000",
+        "verdict": "AC"
+      }
+    ],
+    "typing": {
+      "inserted": 105,
+      "deleted": 0,
+      "pasteLike": 1,
+      "undo": 0,
+      "redo": 0
+    },
+    "minutes": {
+      "0": {
+        "none": 1000,
+        "statement": 4000,
+        "code": 17000,
+        "outside": 5000,
+        "idle": 3000
+      }
+    },
+    "idleGaps": [
+      {
+        "start": 17000,
+        "end": 20000,
+        "ms": 3000
+      }
+    ],
+    "firstAC": 24000,
+    "result": {
+      "board": "A ✓",
+      "acceptedProblems": 1
+    },
+    "activityStrip": [
+      {
+        "minute": 0,
+        "category": "code",
+        "ms": {
+          "none": 1000,
+          "statement": 4000,
+          "code": 17000,
+          "outside": 5000,
+          "idle": 3000
+        }
+      }
+    ]
+  },
+  "unassigned": {
+    "totalMs": 1000,
+    "timeMs": {
+      "statement": 0,
+      "code": 0,
+      "input": 0,
+      "output": 0,
+      "other-file": 0,
+      "none": 1000,
+      "outside": 0,
+      "idle": 0
+    },
+    "milestones": {},
+    "laps": [],
+    "runs": 0,
+    "sampleRuns": {
+      "pass": 0,
+      "fail": 0
+    },
+    "sampleResults": {
+      "total": 0,
+      "pass": 0,
+      "fail": 0,
+      "verdicts": {}
+    },
+    "compileErrors": 0,
+    "submissions": [],
+    "verdicts": [],
+    "typing": {
+      "inserted": 0,
+      "deleted": 0,
+      "pasteLike": 0,
+      "undo": 0,
+      "redo": 0
+    },
+    "minutes": {
+      "0": {
+        "none": 1000
+      }
+    },
+    "idleGaps": [],
+    "activityStrip": [
+      {
+        "minute": 0,
+        "category": "none",
+        "ms": {
+          "none": 1000
+        }
+      }
+    ]
+  },
+  "problems": {
+    "A": {
+      "totalMs": 29000,
+      "timeMs": {
+        "statement": 4000,
+        "code": 17000,
+        "input": 0,
+        "output": 0,
+        "other-file": 0,
+        "none": 0,
+        "outside": 5000,
+        "idle": 3000
+      },
+      "milestones": {
+        "A:first_statement": 1000,
+        "A:first_keystroke": 6000,
+        "A:first_compile": 7300,
+        "A:first_clean_compile": 7300,
+        "A:first_sample_pass": 8200,
+        "A:first_submission": 22000,
+        "A:first_AC": 24000
+      },
+      "laps": [
+        {
+          "t": 21000,
+          "problem": "A",
+          "phase": "code",
+          "label": "Synthetic lap: reviewed the boundary input"
+        }
+      ],
+      "runs": 1,
+      "sampleRuns": {
+        "pass": 1,
+        "fail": 0
+      },
+      "sampleResults": {
+        "total": 1,
+        "pass": 1,
+        "fail": 0,
+        "verdicts": {
+          "ĐÚNG": 1
+        }
+      },
+      "compileErrors": 0,
+      "submissions": [
+        {
+          "t": 22000,
+          "id": "1000",
+          "url": "https://oj.vnoi.info/submission/1000",
+          "language": "C++20"
+        }
+      ],
+      "verdicts": [
+        {
+          "t": 24000,
+          "id": "1000",
+          "verdict": "AC"
+        }
+      ],
+      "typing": {
+        "inserted": 105,
+        "deleted": 0,
+        "pasteLike": 1,
+        "undo": 0,
+        "redo": 0
+      },
+      "minutes": {
+        "0": {
+          "statement": 4000,
+          "code": 17000,
+          "outside": 5000,
+          "idle": 3000
+        }
+      },
+      "idleGaps": [
+        {
+          "start": 17000,
+          "end": 20000,
+          "ms": 3000
+        }
+      ],
+      "firstAC": 24000,
+      "sourceFile": "A/A.cpp",
+      "key": "A",
+      "name": "Synthetic addition",
+      "vnojCode": "synthetic-addition",
+      "url": "https://oj.vnoi.info/problem/synthetic-addition",
+      "originalHeading": "Problem A",
+      "originalNumber": "A",
+      "language": "C++",
+      "finalVerdict": "AC",
+      "bestScore": null,
+      "accepted": true,
+      "submissionsCount": 1,
+      "result": {
+        "sent": 1,
+        "best": {
+          "ac": true,
+          "points": null,
+          "text": "AC"
+        },
+        "pending": 0
+      },
+      "activityStrip": [
+        {
+          "minute": 0,
+          "category": "code",
+          "ms": {
+            "statement": 4000,
+            "code": 17000,
+            "outside": 5000,
+            "idle": 3000
+          }
+        }
+      ]
+    }
+  },
+  "visits": [
+    {
+      "t": 0,
+      "end": 1000,
+      "problem": null,
+      "category": "none"
+    },
+    {
+      "t": 1000,
+      "end": 5000,
+      "problem": "A",
+      "category": "statement"
+    },
+    {
+      "t": 5000,
+      "end": 10000,
+      "problem": "A",
+      "category": "code"
+    },
+    {
+      "t": 10000,
+      "end": 15000,
+      "problem": "A",
+      "category": "outside"
+    },
+    {
+      "t": 15000,
+      "end": 17000,
+      "problem": "A",
+      "category": "code"
+    },
+    {
+      "t": 17000,
+      "end": 20000,
+      "problem": "A",
+      "category": "idle"
+    },
+    {
+      "t": 20000,
+      "end": 30000,
+      "problem": "A",
+      "category": "code"
+    }
+  ]
+}

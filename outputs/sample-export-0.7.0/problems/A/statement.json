@@ -1,0 +1,18 @@
+{
+  "source": "problems/A/statement.pdf",
+  "pages": {
+    "start": 1,
+    "end": 1
+  },
+  "crop": {
+    "top": 34,
+    "bottom": null,
+    "units": "PDF points; viewport scale 1, top origin; top applies first page, bottom last page"
+  },
+  "confidence": "title-heading",
+  "assignment": "automatic",
+  "originalHeading": "Problem A",
+  "originalNumber": "A",
+  "commonPages": null,
+  "warning": null
+}

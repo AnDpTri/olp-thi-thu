@@ -1,0 +1,130 @@
+{"ts":"2026-11-14T20:58:00.904Z","scene":"working-code-input-output","width":1366,"height":768,"sha256":"8b4242c8779cfdc14ccf4ef79f90fd2743c7cfba16f029bbf1d8e94d2231e485"}
+{"ts":"2026-11-14T20:58:03.191Z","scene":"working-code-input-output","width":1920,"height":1080,"sha256":"c6784e0c91bd1273c37e27e84748ca9f24ef1b82a5d4b2c5ee9e166633739957"}
+{"ts":"2026-11-14T20:58:07.067Z","scene":"split-statement-A-pages-3-4","width":1366,"height":768,"sha256":"fd04941afd98f0c7d79f43ba9c16dfbed9ab6151b3ca9d529df8c352330202f9"}
+{"ts":"2026-11-14T20:58:09.378Z","scene":"split-statement-A-pages-3-4","width":1920,"height":1080,"sha256":"d0bc2f7aa0ea044d8fb74e6d4285d99c8ca2c735536e0ca5dfa2490c46f57cef"}
+{"ts":"2026-11-14T20:58:13.905Z","scene":"working-without-pdf","width":1366,"height":768,"sha256":"3ae930a5ca7374d1828d55be7c3cc022b51e95dd88e41dc4c73f192525a79fad"}
+{"ts":"2026-11-14T20:58:16.179Z","scene":"working-without-pdf","width":1920,"height":1080,"sha256":"3afa91335b8b6d8115d463d7f88a4eff2a7e49a4d4a8292d495dfeafff3d0b00"}
+{"ts":"2026-11-14T20:58:22.933Z","scene":"failing-sample-tree","width":1366,"height":768,"sha256":"53212079886f7c567734237f73e0ca6ddca524d9e4f9ef8ece4fd22cbfed9472"}
+{"ts":"2026-11-14T20:58:25.218Z","scene":"failing-sample-tree","width":1920,"height":1080,"sha256":"1a6677dcc23119839976ed6ca29b33dad6d25dcb90240a8ff683d56b7783385c"}
+{"ts":"2026-11-14T20:58:29.318Z","scene":"failing-sample-diff","width":1366,"height":768,"sha256":"84a1f5e79b612bde318e88410cfd0151efb532f163827d519e565eb73b80d724"}
+{"ts":"2026-11-14T20:58:31.601Z","scene":"failing-sample-diff","width":1920,"height":1080,"sha256":"e55e85baf36de5de14192977b42d3fdc84d3a244a6d68af6778fe552c225d1db"}
+{"ts":"2026-11-14T20:58:36.266Z","scene":"submissions-scoreboard-milestones","width":1366,"height":768,"sha256":"a9cb7c93588ebb9555dbb675db1f596b470bffe1e9ae7f18bd748e2c1e39a3ef"}
+{"ts":"2026-11-14T20:58:38.552Z","scene":"submissions-scoreboard-milestones","width":1920,"height":1080,"sha256":"dad834fe49d594f91342ea682aa794c37c10ea6cb312ea73402ce0ea21171b27"}
+{"ts":"2026-11-14T20:58:45.321Z","scene":"combined-pdf-fallback-all-pages","width":1366,"height":768,"sha256":"358e9d9efb5ff7a2b8a3454e71fc29223d5b931812c1e036ccdb54c8d8df00b2"}
+{"ts":"2026-11-14T20:58:47.638Z","scene":"combined-pdf-fallback-all-pages","width":1920,"height":1080,"sha256":"734097fc3cb2a9cd853a008e798e0944b19f5afd9b321f8654101ae4522622bc"}
+{"ts":"2026-11-14T20:58:52.064Z","scene":"export-notification","width":1366,"height":768,"sha256":"5475754e2cf2cbed7b8dce2420b9ac0f749c09304c1e7fb64212ff76bc1d833e"}
+{"ts":"2026-11-14T20:58:54.356Z","scene":"export-notification","width":1920,"height":1080,"sha256":"d2e001d401f560e21984058dd24d2e7a0fe0f365e370aed61a906fd01fabac25"}
+{"ts":"2026-11-14T20:59:09.366Z","scene":"last-five-minutes","width":1366,"height":768,"sha256":"a2a66ebe21828f5b1a60811659cb1dfbf091cfb8e0bd70a1bdf8a7f76d1e17e4"}
+{"ts":"2026-11-14T20:59:11.654Z","scene":"last-five-minutes","width":1920,"height":1080,"sha256":"1a34ed5eb4887ae46b3b0dcc5c1b1e9498bc19fded51570cd0c38bd60c041bee"}
+{"ts":"2026-11-14T20:59:21.913Z","scene":"quick-cookie-paste-box","width":1366,"height":768,"sha256":"0c4af9219477c727284fcb33acf8944ccecb6976bb6d7b61af7445cfe605e130"}
+{"ts":"2026-11-14T20:59:24.179Z","scene":"quick-cookie-paste-box","width":1920,"height":1080,"sha256":"5fc47b4939d8f78b3899874b7d26e494709e2b4488ee4625b4577ee8321544fc"}
+{"ts":"2026-11-14T20:59:26.718Z","scene":"quick-link-selection","width":1366,"height":768,"expectedText":"Link đang sao chép","sha256":"1ebf59fca56809ca2b4fd24c6db59bb93a61edaffa7b320180ebbed830a73a8f"}
+{"ts":"2026-11-14T20:59:28.982Z","scene":"quick-link-selection","width":1920,"height":1080,"expectedText":"Link đang sao chép","sha256":"6f889023526598e9512bc1be1c07c48976eb585e94f66912478929321301b6d3"}
+{"ts":"2026-11-14T20:59:34.817Z","scene":"quick-ready-code-input-output","width":1366,"height":768,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"0925ae6ab3431e62cce6424cd66eee47b4aadfe119c53ba25c2d6c2d66925b95"}
+{"ts":"2026-11-14T20:59:37.090Z","scene":"quick-ready-code-input-output","width":1920,"height":1080,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"b913de9ccc6d61b8ef29921079c58349db919ec9c52fec9a7b0bf2d58cd26585"}
+{"ts":"2026-11-14T20:59:39.643Z","scene":"quick-ready-working-view","width":1366,"height":768,"sha256":"bd1be080e16782a97f780a0ec9ff41bc8b4f0468c1aad65c4e1f0e79cfebc2a0"}
+{"ts":"2026-11-14T20:59:41.918Z","scene":"quick-ready-working-view","width":1920,"height":1080,"sha256":"c6ef01cc812f414a69156e46859ba03c44294537abb001f5153c9fd8f99292e5"}
+{"ts":"2026-11-14T21:10:40.643Z","scene":"working-code-input-output","width":1366,"height":768,"sha256":"4588fb37043303fed69808856c59c837485c3e35b5fd050615573867d94a3430"}
+{"ts":"2026-11-14T21:10:42.925Z","scene":"working-code-input-output","width":1920,"height":1080,"sha256":"832d2762f38aedc39c526645e80581d4e1ce9714131938291c0d0fabeab23f6c"}
+{"ts":"2026-11-14T21:10:47.061Z","scene":"split-statement-A-pages-3-4","width":1366,"height":768,"sha256":"86aa3673589da1521680e9eb5476336d77cfd24021cffffd751c2bc19719a601"}
+{"ts":"2026-11-14T21:10:49.370Z","scene":"split-statement-A-pages-3-4","width":1920,"height":1080,"sha256":"452ecf20dd578938714d849637e0da3abd5f1d5e0e2c9f5a6df310726f49eb8c"}
+{"ts":"2026-11-14T21:10:53.769Z","scene":"working-without-pdf","width":1366,"height":768,"sha256":"5fa0df0fb5f172a7f2152204b1ae846eba39ec55a5a07fc9bf0bd1e627abe773"}
+{"ts":"2026-11-14T21:10:56.046Z","scene":"working-without-pdf","width":1920,"height":1080,"sha256":"6d885af02bdfceb12b123e53dc90c9eead023ea71d46aee78042b4f5f9804fb2"}
+{"ts":"2026-11-14T21:11:02.813Z","scene":"failing-sample-tree","width":1366,"height":768,"sha256":"16e3f6aa5cbcae61ca9281b703353b2a0360c9c70f31a29e2ec770ca9a272be1"}
+{"ts":"2026-11-14T21:11:05.093Z","scene":"failing-sample-tree","width":1920,"height":1080,"sha256":"9804fb684054d0b191888269e40e2e2c9f73fd425121ef9d95564c4c905a4bf3"}
+{"ts":"2026-11-14T21:11:09.221Z","scene":"failing-sample-diff","width":1366,"height":768,"sha256":"cabee682de58aa546336419bf2a060cd1fd6c4323b92b22c5e622c5a066f4553"}
+{"ts":"2026-11-14T21:11:11.510Z","scene":"failing-sample-diff","width":1920,"height":1080,"sha256":"eb5b97f9bdb5ec07790d76be635f70f7fe7208b69d7fcbf35e2944a4f8aaf45e"}
+{"ts":"2026-11-14T21:11:16.154Z","scene":"submissions-scoreboard-milestones","width":1366,"height":768,"sha256":"2501cfbab8f5149a4e5514bcc8bd9d8a9fff8648038948c40d33a8e9b5b97286"}
+{"ts":"2026-11-14T21:11:18.437Z","scene":"submissions-scoreboard-milestones","width":1920,"height":1080,"sha256":"1cfd00da58f8737679ceb359d275fbe285646dde54061c6fac96954be371bcee"}
+{"ts":"2026-11-14T21:11:24.688Z","scene":"combined-pdf-fallback-all-pages","width":1366,"height":768,"sha256":"272d228ae97fe5fbc500fd21edce60c8fca414cbde3c5d15244715f31675f452"}
+{"ts":"2026-11-14T21:11:26.991Z","scene":"combined-pdf-fallback-all-pages","width":1920,"height":1080,"sha256":"ce4799cedc1e5340f1421734412da7279de5f5546aeb2433c223050e7fc85288"}
+{"ts":"2026-11-14T21:11:31.375Z","scene":"export-notification","width":1366,"height":768,"sha256":"1f4a539c3dca232ebf7a8a4e1d71e8f9094c45e3c5c27f42491d236eabb9c75a"}
+{"ts":"2026-11-14T21:11:33.665Z","scene":"export-notification","width":1920,"height":1080,"sha256":"5c75989d8e131a6e75cb3a6160c0fe7bbd78947b7a880def2e8b0f7e7606c739"}
+{"ts":"2026-11-14T21:11:47.496Z","scene":"last-five-minutes","width":1366,"height":768,"sha256":"46da4ff3156134956de972946b07e779ec77318b42015c7d94ae50b1acd8e2af"}
+{"ts":"2026-11-14T21:11:49.785Z","scene":"last-five-minutes","width":1920,"height":1080,"sha256":"19d53c43ced8800734f81ddccb959d072f2b0d206ac4768ec5a2b20480d117f0"}
+{"ts":"2026-11-14T21:11:59.695Z","scene":"quick-cookie-paste-box","width":1366,"height":768,"sha256":"ddceeb9671e45d76875b78dae5cab4e281f1d09ac813cba1cc80b2b55be9a11f"}
+{"ts":"2026-11-14T21:12:01.960Z","scene":"quick-cookie-paste-box","width":1920,"height":1080,"sha256":"c68c844740813882c3bc3dfbb5e643c6711dc8c22c5cfe5858815073f0337f28"}
+{"ts":"2026-11-14T21:12:04.502Z","scene":"quick-link-selection","width":1366,"height":768,"expectedText":"Link đang sao chép","sha256":"5559a3ac4ad01356be601c70e1244ea2f1577da0122e1789f1aba5405af53556"}
+{"ts":"2026-11-14T21:12:06.763Z","scene":"quick-link-selection","width":1920,"height":1080,"expectedText":"Link đang sao chép","sha256":"ee0f09bc4efb8e35003abd3edf25804f6c746cf808fec14963c24f169cac0079"}
+{"ts":"2026-11-14T21:12:12.035Z","scene":"quick-ready-code-input-output","width":1366,"height":768,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"8e80e99bf9b8e444a6579fe7349c9e3644c07bf1ed3806f41d859e4e5661584b"}
+{"ts":"2026-11-14T21:12:14.315Z","scene":"quick-ready-code-input-output","width":1920,"height":1080,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"40c31db8b8fb77d8c7c7c53f6ec295f721fa89e25d001a702f24e54beb6b8325"}
+{"ts":"2026-11-14T21:12:16.929Z","scene":"quick-ready-working-view","width":1366,"height":768,"sha256":"20f6bd9ce50dbd93e367ad83390c26083cbd6205cc2fc148972f13f158e4e74e"}
+{"ts":"2026-11-14T21:12:19.199Z","scene":"quick-ready-working-view","width":1920,"height":1080,"sha256":"eecc9c36b361f94f97ae2a85f9de45bd9c2b931613f292c429916693429032ad"}
+{"ts":"2026-11-14T21:28:36.253Z","scene":"working-code-input-output","width":1366,"height":768,"sha256":"6187cccb0da1ffb9b6b906cf87730b1ff54dac56efc28f509bee9a408b42eaf6"}
+{"ts":"2026-11-14T21:28:38.531Z","scene":"working-code-input-output","width":1920,"height":1080,"sha256":"e9a7bea7b4a11ded36d73117b559c4cb075ed60e4bf0f62505f47b5b9e0bbcd1"}
+{"ts":"2026-11-14T21:28:42.412Z","scene":"split-statement-A-pages-3-4","width":1366,"height":768,"sha256":"4758c73cea1d7b177e2e47a091e7c76edb097b2fe59c0d63618d4b6a72018442"}
+{"ts":"2026-11-14T21:28:44.716Z","scene":"split-statement-A-pages-3-4","width":1920,"height":1080,"sha256":"6ea9e6f22ed841051e6ae9047c2a7aac2acb37545b9d96bf7498c25904ca048f"}
+{"ts":"2026-11-14T21:28:49.070Z","scene":"working-without-pdf","width":1366,"height":768,"sha256":"9580714ee6ae13aca044cd8026df327d104cd76066f33b6c4ccd44b8bdf117a9"}
+{"ts":"2026-11-14T21:28:51.341Z","scene":"working-without-pdf","width":1920,"height":1080,"sha256":"ea8d2e477b544a94a94507343e6e9e35fef903a91ac4ce6cc8883ade5dfb5e24"}
+{"ts":"2026-11-14T21:28:58.372Z","scene":"failing-sample-tree","width":1366,"height":768,"sha256":"b88ec2a39617e379ea74e08c04c4877bac6e1e36fbb7f6b01c53ddcf06d147cd"}
+{"ts":"2026-11-14T21:29:00.651Z","scene":"failing-sample-tree","width":1920,"height":1080,"sha256":"541e7f9368188e3f46400a6667420cd7dd54f97d850da87003e52ac6ccb50f32"}
+{"ts":"2026-11-14T21:29:04.555Z","scene":"failing-sample-diff","width":1366,"height":768,"sha256":"076ba419b556a05fd89130fb2d96035ba59376f9fc72f7266e0ef90b65a8e4df"}
+{"ts":"2026-11-14T21:29:06.844Z","scene":"failing-sample-diff","width":1920,"height":1080,"sha256":"00286d23d835abecb5d46c28f90c202891e371c59b183cfc8317ad700faba3df"}
+{"ts":"2026-11-14T21:29:11.279Z","scene":"submissions-scoreboard-milestones","width":1366,"height":768,"sha256":"0736790ffb89d427cbffb24204fe0ef2b123a962e301b08e4c5497f7b8b4adc9"}
+{"ts":"2026-11-14T21:29:13.551Z","scene":"submissions-scoreboard-milestones","width":1920,"height":1080,"sha256":"ead92ace9f9d1e26f7957ced9b1ff3aab882d718a3233a132a0585df01c67078"}
+{"ts":"2026-11-14T21:29:19.776Z","scene":"combined-pdf-fallback-all-pages","width":1366,"height":768,"sha256":"d7c3c1ce159e8c33e456df4630774c6c1b23b2f9fdff605bb778401e6eda9f2f"}
+{"ts":"2026-11-14T21:29:22.078Z","scene":"combined-pdf-fallback-all-pages","width":1920,"height":1080,"sha256":"d647c7094c3b6baa12cf7993f82ca279cf4a16ce207d7554ccd23ac2caad8a4b"}
+{"ts":"2026-11-14T21:29:26.476Z","scene":"export-notification","width":1366,"height":768,"sha256":"9416e94c9292a99636ed1efa24158775b10018b522f552477b017e2b757054c2"}
+{"ts":"2026-11-14T21:29:28.768Z","scene":"export-notification","width":1920,"height":1080,"sha256":"1d4c311f89bba4aa16b6f68b2a9183018e55d7ba8e42e80ee1aaaf5757c3e68d"}
+{"ts":"2026-11-14T21:29:42.484Z","scene":"last-five-minutes","width":1366,"height":768,"sha256":"46da4ff3156134956de972946b07e779ec77318b42015c7d94ae50b1acd8e2af"}
+{"ts":"2026-11-14T21:29:44.758Z","scene":"last-five-minutes","width":1920,"height":1080,"sha256":"19d53c43ced8800734f81ddccb959d072f2b0d206ac4768ec5a2b20480d117f0"}
+{"ts":"2026-11-14T21:29:54.770Z","scene":"quick-cookie-paste-box","width":1366,"height":768,"sha256":"b63ef5e78b45d5d087020c0a945aa95478a1ca5e2f50b8366d8eec37947d1c04"}
+{"ts":"2026-11-14T21:29:57.034Z","scene":"quick-cookie-paste-box","width":1920,"height":1080,"sha256":"8c06f0c98b7494f9fe2c86dbf8cf175cc65f5576e32a7a64cd2a8d0b96d25c40"}
+{"ts":"2026-11-14T21:29:59.574Z","scene":"quick-link-selection","width":1366,"height":768,"expectedText":"Link đang sao chép","sha256":"b5befac5810666541ee8e20ca53a004b1bdb082fafb2a46c657e538d69fb53ee"}
+{"ts":"2026-11-14T21:30:01.834Z","scene":"quick-link-selection","width":1920,"height":1080,"expectedText":"Link đang sao chép","sha256":"4c7ab010e42fe2cb595fc1f85c8163571c7dc870e3832aa95ceeb590a42c6f50"}
+{"ts":"2026-11-14T21:30:07.074Z","scene":"quick-ready-code-input-output","width":1366,"height":768,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"ff83204e76b452997c27410f0ab49ab129d4cd2d040c218b2813d5cd4bb271fb"}
+{"ts":"2026-11-14T21:30:09.350Z","scene":"quick-ready-code-input-output","width":1920,"height":1080,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"d7d4b23806bb27dd71da391644ed63cb34590ef1bd70148ec12460eb74305a7e"}
+{"ts":"2026-11-14T21:30:11.921Z","scene":"quick-ready-working-view","width":1366,"height":768,"sha256":"052dd86d3376389ae0ca3d3dca3d8f34c885e356ed7f2a7b26ec1f86b30f0431"}
+{"ts":"2026-11-14T21:30:14.192Z","scene":"quick-ready-working-view","width":1920,"height":1080,"sha256":"9af40f43380f490bacf4fb2b7ab6fc84d3023546b20f6efe1a202c82f4327259"}
+{"ts":"2026-11-14T22:13:32.201Z","scene":"working-code-input-output","width":1366,"height":768,"sha256":"dcb4546427bb451440628c06dcb0bc9b7c0dde3fa2a7f869c23e5791e9e2ed32"}
+{"ts":"2026-11-14T22:13:34.482Z","scene":"working-code-input-output","width":1920,"height":1080,"sha256":"941aae70d50d090e88b45d746ac7983020aad8e11f5eea4c0b7ea1240409b7c1"}
+{"ts":"2026-11-14T22:13:38.358Z","scene":"split-statement-A-pages-3-4","width":1366,"height":768,"sha256":"b9e3f45b5a3bf67971ac05fce5ffed13f6140c671287ff68eb6c55291d30e3c5"}
+{"ts":"2026-11-14T22:13:40.675Z","scene":"split-statement-A-pages-3-4","width":1920,"height":1080,"sha256":"c5cc8c3c6190164698b33dfe9f2561d7325d9f94adffaa8616f9d756d1a64d56"}
+{"ts":"2026-11-14T22:13:45.081Z","scene":"working-without-pdf","width":1366,"height":768,"sha256":"3a101d1b3ea4854a8eb7eab58f194a25ca3e30b8de858421b38d63a3491c8074"}
+{"ts":"2026-11-14T22:13:47.357Z","scene":"working-without-pdf","width":1920,"height":1080,"sha256":"903276d2b814ae699a0523aef339446efc88a0813a7254b0e6c79a6397b970e6"}
+{"ts":"2026-11-14T22:13:54.400Z","scene":"failing-sample-tree","width":1366,"height":768,"sha256":"1b2de6c3eaa51690fcdeb314f6f2320b89439b2b6fb2c0892d0f79519927e397"}
+{"ts":"2026-11-14T22:13:56.690Z","scene":"failing-sample-tree","width":1920,"height":1080,"sha256":"ec9a8b314393244e7a3559677deb425c98547b118688bd1a274607be46ebba72"}
+{"ts":"2026-11-14T22:14:00.776Z","scene":"failing-sample-diff","width":1366,"height":768,"sha256":"8f10ccfcb1dc53cd0e193cd035f642f65b6d6b7c695aa7e0dccab3c69fe621b6"}
+{"ts":"2026-11-14T22:14:03.054Z","scene":"failing-sample-diff","width":1920,"height":1080,"sha256":"20623beedfd5d8b4b92327739319d64e9efe8b2fa45205d8c48c1056c755bba3"}
+{"ts":"2026-11-14T22:14:07.436Z","scene":"submissions-scoreboard-milestones","width":1366,"height":768,"sha256":"6ef4c4cd25533ad753347301f457d444d13a6489b4cff6922bcd2405f223cb38"}
+{"ts":"2026-11-14T22:14:09.724Z","scene":"submissions-scoreboard-milestones","width":1920,"height":1080,"sha256":"203ad1b3e0cff997c444111e41e9a00ed55a8f29c1a6286c3d045317ae5aaee6"}
+{"ts":"2026-11-14T22:14:15.974Z","scene":"combined-pdf-fallback-all-pages","width":1366,"height":768,"sha256":"ce07a73b55b6cff57e09fdb9f8b897a1de836adeca5fb0bc52fe7d01cf5b78e6"}
+{"ts":"2026-11-14T22:14:18.273Z","scene":"combined-pdf-fallback-all-pages","width":1920,"height":1080,"sha256":"78c6e8d92f8b1aa46aff8415f0fd7539237814204886d82575817db085958e68"}
+{"ts":"2026-11-14T22:14:22.658Z","scene":"export-notification","width":1366,"height":768,"sha256":"f99e6447227c0443fd059dde71a253454bb2fd0ec142c7405bafc134f89a49c0"}
+{"ts":"2026-11-14T22:14:24.938Z","scene":"export-notification","width":1920,"height":1080,"sha256":"9276c921ac7e7603faa8ea36cf926bdd87a95a550d2af9e1c56e7ddd5b9d5f46"}
+{"ts":"2026-11-14T22:14:38.512Z","scene":"last-five-minutes","width":1366,"height":768,"sha256":"fe73d65e3d955a41200600d0da2c194f856f59e26143fa4331fb186563f9543e"}
+{"ts":"2026-11-14T22:14:40.791Z","scene":"last-five-minutes","width":1920,"height":1080,"sha256":"784f0e3531a775aeb37cddd54c1daf078a71b9204682769be80ae36e355c8e4e"}
+{"ts":"2026-11-14T22:14:50.625Z","scene":"quick-cookie-paste-box","width":1366,"height":768,"sha256":"ce8561fa48747e57bb0cbabbecbb7e6a5fb54a1b75e4e91cb146017cffbb579f"}
+{"ts":"2026-11-14T22:14:52.888Z","scene":"quick-cookie-paste-box","width":1920,"height":1080,"sha256":"82559ff3a9c41b3d47fda1d0f291d48938a47e0b7b0ee397d061c40c68a49291"}
+{"ts":"2026-11-14T22:14:55.415Z","scene":"quick-link-selection","width":1366,"height":768,"expectedText":"Link đang sao chép","sha256":"1ebf59fca56809ca2b4fd24c6db59bb93a61edaffa7b320180ebbed830a73a8f"}
+{"ts":"2026-11-14T22:14:57.671Z","scene":"quick-link-selection","width":1920,"height":1080,"expectedText":"Link đang sao chép","sha256":"6f889023526598e9512bc1be1c07c48976eb585e94f66912478929321301b6d3"}
+{"ts":"2026-11-14T22:15:02.854Z","scene":"quick-ready-code-input-output","width":1366,"height":768,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"506938ece634749e1f3584b23c1563a599fa99adb5c66ce44572b1895e5d097b"}
+{"ts":"2026-11-14T22:15:05.143Z","scene":"quick-ready-code-input-output","width":1920,"height":1080,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"fb750e94bffdc2c5f692a3c24feb805dfadb362b22d7fa69942eaf61c04aa16e"}
+{"ts":"2026-11-14T22:15:07.736Z","scene":"quick-ready-working-view","width":1366,"height":768,"sha256":"3fde4523887132ce713d68c05b82b2663840c40997a0da33a5da2d4b2f0fd168"}
+{"ts":"2026-11-14T22:15:10.011Z","scene":"quick-ready-working-view","width":1920,"height":1080,"sha256":"778a254ff454d4042de9f3bb0189e843c3bd66b8cc8498c3919f0878a80b7bc8"}
+{"ts":"2026-11-14T22:44:48.930Z","scene":"working-code-input-output","width":1366,"height":768,"sha256":"a6b851e0f35b3708e6b00d2bc88f6ce1ad6628e2c675ca135072a9ef685b32d3"}
+{"ts":"2026-11-14T22:44:51.204Z","scene":"working-code-input-output","width":1920,"height":1080,"sha256":"d54c6b9e74d342d0528b5d21cb26597b5c4d8989530c2d49f09e5e7c38d53074"}
+{"ts":"2026-11-14T22:44:55.074Z","scene":"split-statement-A-pages-3-4","width":1366,"height":768,"sha256":"4e4020d266d4949b1cee50e428bc7ffa27ae02ad7725c7e2f8c9f81646230ada"}
+{"ts":"2026-11-14T22:44:57.381Z","scene":"split-statement-A-pages-3-4","width":1920,"height":1080,"sha256":"be57079e4f7c8cb6178adbe890e87ead7e3432f8d7759f850b8aca0c08efc7f3"}
+{"ts":"2026-11-14T22:45:01.783Z","scene":"working-without-pdf","width":1366,"height":768,"sha256":"ef54818f0edb3b472e31ef121fb235f6c137978cc6f657ad339930856e25d9cd"}
+{"ts":"2026-11-14T22:45:04.056Z","scene":"working-without-pdf","width":1920,"height":1080,"sha256":"be0275137ef66e8a2aabfe43d63c498586ef38bfde272390708900e3c56fdc73"}
+{"ts":"2026-11-14T22:45:10.567Z","scene":"failing-sample-tree","width":1366,"height":768,"sha256":"683db296d0a0aaa954a6ee1c70657bc4537db7e4300d1996809af33e1a52b2db"}
+{"ts":"2026-11-14T22:45:12.859Z","scene":"failing-sample-tree","width":1920,"height":1080,"sha256":"7a22c9c81f5e63ff7f300083e266d924601c48ee6b2d6c9293c91b8eec262756"}
+{"ts":"2026-11-14T22:45:17.016Z","scene":"failing-sample-diff","width":1366,"height":768,"sha256":"4e2f79d0f2a5d36eef7b664a08c589475653e903ac78c81d5776477f8b8fe644"}
+{"ts":"2026-11-14T22:45:19.299Z","scene":"failing-sample-diff","width":1920,"height":1080,"sha256":"a597395e5822dd9e6794802206afdd10d34d05fc81e45ff147eb3f5d355ee9ba"}
+{"ts":"2026-11-14T22:45:23.695Z","scene":"submissions-scoreboard-milestones","width":1366,"height":768,"sha256":"8dae50f5604a152cbc3289d88d350bae9ff4cd740ae0b4ff0ad2686dd08bf159"}
+{"ts":"2026-11-14T22:45:25.982Z","scene":"submissions-scoreboard-milestones","width":1920,"height":1080,"sha256":"9bba6deaa3f227ce9f6083777aab4052a4592c2c248fbba46e05980b4cbe8573"}
+{"ts":"2026-11-14T22:45:32.221Z","scene":"combined-pdf-fallback-all-pages","width":1366,"height":768,"sha256":"9fd6df6c492961d259bbe44eef8e6c3836e0d71ca5c70660d15a480e09003fa6"}
+{"ts":"2026-11-14T22:45:34.518Z","scene":"combined-pdf-fallback-all-pages","width":1920,"height":1080,"sha256":"8679aeb793c8502e75e9bfdf8733bb460e8a722979904e603485c75264914b56"}
+{"ts":"2026-11-14T22:45:38.923Z","scene":"export-notification","width":1366,"height":768,"sha256":"00da892497accb522265fb04d6ac4c0315be55ff5e4ed4422aef6027c1fc662d"}
+{"ts":"2026-11-14T22:45:41.218Z","scene":"export-notification","width":1920,"height":1080,"sha256":"abb394233d76a5a1ddc83b4e3189e3b0773d466649afcbfe2a7f8d2c02e35f09"}
+{"ts":"2026-11-14T22:45:55.160Z","scene":"last-five-minutes","width":1366,"height":768,"sha256":"46da4ff3156134956de972946b07e779ec77318b42015c7d94ae50b1acd8e2af"}
+{"ts":"2026-11-14T22:45:57.430Z","scene":"last-five-minutes","width":1920,"height":1080,"sha256":"19d53c43ced8800734f81ddccb959d072f2b0d206ac4768ec5a2b20480d117f0"}
+{"ts":"2026-11-14T22:46:07.468Z","scene":"quick-cookie-paste-box","width":1366,"height":768,"sha256":"b63ef5e78b45d5d087020c0a945aa95478a1ca5e2f50b8366d8eec37947d1c04"}
+{"ts":"2026-11-14T22:46:09.732Z","scene":"quick-cookie-paste-box","width":1920,"height":1080,"sha256":"8c06f0c98b7494f9fe2c86dbf8cf175cc65f5576e32a7a64cd2a8d0b96d25c40"}
+{"ts":"2026-11-14T22:46:12.273Z","scene":"quick-link-selection","width":1366,"height":768,"expectedText":"Link đang sao chép","sha256":"b5befac5810666541ee8e20ca53a004b1bdb082fafb2a46c657e538d69fb53ee"}
+{"ts":"2026-11-14T22:46:14.522Z","scene":"quick-link-selection","width":1920,"height":1080,"expectedText":"Link đang sao chép","sha256":"273bf5304c4b10dfb91ccd2a31607e8645eb0dd4601e2468a97c4c3e9f695f49"}
+{"ts":"2026-11-14T22:46:19.815Z","scene":"quick-ready-code-input-output","width":1366,"height":768,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"fe34e84168ca4b4da0789defed2ede74eb501e71d2d8100c20a6cf585d93091b"}
+{"ts":"2026-11-14T22:46:22.098Z","scene":"quick-ready-code-input-output","width":1920,"height":1080,"expectedText":"Bắt đầu 180 phút ngay?","sha256":"31c68f6aee367718cbc8e63c963d7fc9901ca957bdf2cbdb302c6e1109d4b717"}
+{"ts":"2026-11-14T22:46:24.655Z","scene":"quick-ready-working-view","width":1366,"height":768,"sha256":"ce9fcd9a466bb5f4adabdb2e86574cefbe0781ed8e1d6b3465ebc31016cb0132"}
+{"ts":"2026-11-14T22:46:26.927Z","scene":"quick-ready-working-view","width":1920,"height":1080,"sha256":"2058ddf5dd16f4cfee4057ed990a7143f5f7bad24462a5f6142d6b24bd5bf7f0"}

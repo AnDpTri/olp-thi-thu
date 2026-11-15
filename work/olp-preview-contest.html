@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Olympic Sinh viên 2024 - Khối Không chuyên - VNOJ: VNOI Online Judge</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="VNOJ, VOI, VNOI, HSG, HSG tin học, VOJ, SPOJ, VO, OJ, online judge, Viet Nam online judge, programming, code, contest">
+        <meta name="description" property="og:description" content="Olympic Sinh viên 2024 - Khối Không chuyên">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/icons/apple-touch-icon-57x57.e750792b3362.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/icons/apple-touch-icon-60x60.06edeef1eae8.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/icons/apple-touch-icon-72x72.7e01fb822726.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/icons/apple-touch-icon-76x76.8b3a9d7327aa.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/icons/apple-touch-icon-114x114.1259af94e1f3.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/icons/apple-touch-icon-120x120.07a6f5f2860e.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/icons/apple-touch-icon-144x144.0e6250d1ce09.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/icons/apple-touch-icon-152x152.5814827957db.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon-180x180.14d393fbbc84.png">
+    <link rel="icon" type="image/png" href="/static/icons/favicon-32x32.830caff33e37.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/static/icons/android-chrome-192x192.ed460939fc1c.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/static/icons/favicon-96x96.30d528fceaf1.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/static/icons/favicon-16x16.8b1ece533f5a.png" sizes="16x16">
+    <meta name="msapplication-TileColor" content="#231F20">
+    <meta name="msapplication-TileImage" content="/static/icons/mstile-144x144.a9e4f872c52b.png">
+    <meta name="theme-color" content="#231F20">
+        <meta property="og:image" content="/static/icons/og_logo.230c11900ff5.png">
+    <meta property="og:site_name" content="VNOJ: VNOI Online Judge">
+    <meta property="og:url"
+          content="https://oj.vnoi.info/contest/olp_kc24">
+
+<link rel="stylesheet" href="/static/cache/css/output.6f3e5e7bdecf.css" type="text/css"><link rel="stylesheet" href="/static/cache/css/output.2a6a80e4fb04.css" type="text/css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="/static/cache/css/output.1a674afa0591.css" type="text/css">    <link rel="canonical"
+          href="https://oj.vnoi.info/contest/olp_kc24">
+<link rel="stylesheet" href="/static/cache/css/output.fab57a679ccc.css" type="text/css" media="all">
+<script src="/static/cache/js/output.9c0480913eff.js"></script><script src="/static/cache/js/output.e92db1c8ff7b.js"></script>    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.time-remaining').each(function () {
+                count_down($(this));
+            });
+        });
+    </script>
+<script type="text/javascript">
+    $(function () {
+        $('.leaving-forever').click(function () {
+            return confirm('Bạn có chắc bạn muốn huỷ tham gia ảo?' + '\n' +
+                'Bạn không thể trở lại với việc tham gia ảo. Bạn phải bắt đầu một lượt tham gia ảo mới.');
+        });
+
+            $('.first-join').click(function () {
+                return confirm('Bạn có chắc bạn muốn tham gia?' + '\n' +
+                    'Truy cập một kỳ thi sẽ bắt đầu đếm ngược thời gian kỳ thi đó, và không thể dừng lại được.');
+            });
+
+
+        $('.register-warning').click(function () {
+            return confirm('Bạn có chắc muốn đăng ký?');
+        });
+    });
+</script><script type="text/javascript">
+    $(function () {
+        var $container = $('#comments').first();
+        var url = $container.data('comments-url');
+        if (!$container.length || !url)
+            return;
+
+        var mode = $container.data('comments-trigger');
+        // When the server already rendered the full comment list inline (the
+        // comment_form-errors fallback, so a failed submission stays visible),
+        // treat comments as already loaded so nothing here re-fetches and
+        // clobbers it with a fresh, error-free AJAX fragment.
+        var loaded = !!$container.data('comments-preloaded');
+        var pendingScrollHash = null;
+
+        function fetchComments(page, scrollToContainer) {
+            var fetchUrl = page ? url + '?page=' + page : url;
+            $container.html('<div class="comments-loading">Đang tải...</div>');
+            $container.load(fetchUrl, function () {
+                if (window.MathJax && MathJax.typesetPromise)
+                    MathJax.typesetPromise([$container[0]]);
+                if (pendingScrollHash && $(pendingScrollHash).length) {
+                    $(pendingScrollHash)[0].scrollIntoView({behavior: 'instant', block: 'start'});
+                    pendingScrollHash = null;
+                } else if (scrollToContainer) {
+                    $container[0].scrollIntoView({behavior: 'instant', block: 'start'});
+                }
+            });
+        }
+
+        function loadComments() {
+            if (loaded) return;
+            loaded = true;
+            fetchComments(null, false);
+        }
+
+        // Exposed so a host page with its own trigger UI (e.g. problem.html's
+        // .problem-tabs click handler / initial-hash handling) can hook in without
+        // reimplementing the fetch/pagination logic.
+        $container.data('load-comments', loadComments);
+        $container.data('set-pending-scroll', function (hash) {
+            pendingScrollHash = hash;
+        });
+
+        // Paginate comments without reloading the page.
+        $container.on('click', '.comments-pagination a', function (e) {
+            var match = /page=(\d+)/.exec($(this).attr('href'));
+            if (!match) return;
+            e.preventDefault();
+            fetchComments(match[1], true);
+        });
+
+        // Tab-mode pages (problem.html) load comments themselves once the
+        // comments tab becomes active (via click or on initial load if it's
+        // already the default tab), using the hooks exposed above. Every other
+        // page has no tab to wait on, so just fetch immediately.
+        if (mode === 'tab') return;
+
+        var hash = window.location.hash;
+        if (/^#comment-\d+$/.test(hash)) {
+            pendingScrollHash = hash;
+        }
+        loadComments();
+    });
+</script>        <script>
+            window.event_dispatcher = new WSEventDispatcher(
+                'wss://oj.vnoi.info/event/',
+                '/channels/',
+                1793558061672
+            );
+        </script>
+
+        <script>window.user = {};</script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YXGZG6XL9E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YXGZG6XL9E');
+</script>
+
+    <script>
+        function submmit_language(lang) {
+            if (lang != "vi" ) {
+                $("input[name=language]").val(lang)
+                $("#set_language").submit()
+            }
+        }
+        function toggle_theme() {
+            var current = "auto";
+            if (current !== 'light' && current !== 'dark') {
+                current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            $("input[name=theme]").val(current === 'dark' ? 'light' : 'dark');
+            $("#set_theme").submit();
+        }
+    </script>
+    <noscript>
+        <style>
+            #content {
+                margin: 80px auto auto;
+            }
+
+            #navigation {
+                top: 27px;
+            }
+        </style>
+    </noscript>
+</head>
+<body data-theme="auto">
+<svg width="0" height="0" style="display: block">
+    <defs>
+        <clipPath id="rating-clip"><circle cx="8" cy="8" r="7"/></clipPath>
+    </defs>
+</svg>
+<nav id="navigation" class="unselectable">
+    <div id="nav-container">
+        <a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+        <ul id="nav-list">
+                <li class="home-nav-element"><a href="/">    	<img src="/static/icons/logo.0a0dce1d8dd3.svg" alt="VNOJ" width="130" height="40"
+             onerror="this.src=&quot;/static/icons/logo.0a0dce1d8dd3.svg&quot;; this.onerror=null" style="border: none; padding-top: 4px">
+</a></li>
+                <li class="home-nav-element"><span class="nav-divider"></span></li>
+                <li class="home-menu-item"><a href="/" class="nav-home">Trang chủ</a></li>
+                    <li>
+                        <a href="/problems/" class="nav-problems">
+                            Danh sách bài
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/submissions/" class="nav-submit">
+                            Các bài nộp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/users/" class="nav-user">
+                            Thành viên
+                                <div class="nav-expand">&gt;</div>
+                        </a>
+<ul>                    <li>
+                        <a href="/organizations/" class="nav-org">
+                            Tổ chức
+                        </a>
+                    </li>
+</ul>                    </li>
+                    <li>
+                        <a href="/contests/" class="nav-contest active">
+                            Các kỳ thi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wiki.vnoi.info/" class="nav-wiki">
+                            Wiki
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/about/" class="nav-about">
+                            Thông tin
+                                <div class="nav-expand">&gt;</div>
+                        </a>
+<ul>                    <li>
+                        <a href="https://cpp-ref.vnoi.info/" class="nav-cpp-ref">
+                            Cpp Refference
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://py-ref.vnoi.info/" class="nav-py-ref">
+                            Python Refference
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/faq/" class="nav-faq">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/custom_checkers/" class="nav-checker">
+                            Trình chấm ngoài
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://vnoi-admin.github.io/vnoi-tags/" class="nav-tag">
+                            Tag
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/status/" class="nav-status">
+                            Máy chấm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/devlog/" class="nav-devlog">
+                            Devlog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/VNOI-Admin/OJ" class="nav-github">
+                            Github
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tickets/" class="nav-tickets">
+                            Tickets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/drive/folders/1v7II21UysbEilhm5NDMcZ8hfnEKnvbeo" class="nav-lib">
+                            Thư viện đề thi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://vnoi.notion.site/External-Setters-8e9f33b233904f3d8110126e84a48b57?pvs=4" class="nav-dxc">
+                            Đề xuất contest
+                        </a>
+                    </li>
+</ul>                    </li>
+                    <li>
+                        <a href="/blogs" class="nav-magazine">
+                            Tạp chí
+                        </a>
+                    </li>
+        </ul>
+
+        <span id="user-links">
+            <a id="theme-toggle" href="#" onclick="toggle_theme(); return false;" title="Toggle dark mode">
+                <img class="theme-icon-dark" src="/static/icons/dark.b5691d356866.svg" alt="Tối" height="20" width="20">
+                <img class="theme-icon-light" src="/static/icons/light.0a9a3351fdea.svg" alt="Sáng" height="20" width="20">
+            </a>
+                <a id="flag_en" href="#" onclick="submmit_language('en'); return false;" title="English" style="margin-right: 5px; margin-top: 4px;">
+                    <img src="/static/icons/gb_flag.7e1408b72e7f.svg" alt="EN" height="24">
+                </a>
+            <span class="nav-divider"></span>
+                <span class="anon">
+                    <a href="/accounts/login/?next=/contest/olp_kc24"><b>Đăng nhập</b></a>
+                        &nbsp;hoặc&nbsp;
+                        <a href="/accounts/register/"><b>Đăng ký</b></a>
+                </span>
+        </span>
+    </div>
+    <div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+    <noscript>
+        <div id="noscript">Trang web này hoạt động tốt nhất khi JavaScript được cho phép.</div>
+    </noscript>
+    <br>
+    <main id="content">
+
+<div class="tabs">
+        <h2>Olympic Sinh viên 2024 - Khối Không chuyên</h2>
+    <ul>
+        <li class="tab active"><a href="/contest/olp_kc24"><i class="tab-icon fa fa-info-circle"></i> Thông tin</a></li>
+
+
+                <li class="tab"><a href="/contest/olp_kc24/ranking/"><i class="tab-icon fa fa-bar-chart"></i> Bảng xếp hạng</a></li>
+
+            <li class="tab"><a href="/contest/olp_kc24/submissions/"><i class="tab-icon fa fa-bar-chart"></i> Các bài nộp</a></li>
+
+
+        <form action="/accounts/login/" method="get"
+              class="contest-join-pseudotab unselectable button">
+            <input type="hidden" name="next" value="/contest/olp_kc24">
+            <input type="submit" value="Đăng nhập để tham gia">
+        </form>
+    </ul>
+</div>        <div id="content-body">    <div id="banner">
+        <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Olympic%20Sinh%20vi%C3%AAn%202024%20-%20Kh%E1%BB%91i%20Kh%C3%B4ng%20chuy%C3%AAn&amp;iso=2024-12-11T10:00:00" class="date">Kỳ thi đã kết thúc.</a>
+        <div id="time">
+                    <b>03 giờ, 00 phút</b> tính từ <b>11 Tháng 12, 2024, 14:00 +07</b>
+        </div>
+    </div>
+
+        <div class="contest-problems">
+            <h2 style="margin-bottom: 0.2em; float:left;"><i class="fa fa-fw fa-question-circle"></i>Bài </h2>
+            <table class="table striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Bài</th>
+                    <th>Time limit</th>
+                    <th>Memory limit</th>
+                        <th>Điểm</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width: 1em;">1</td>
+                        <td style="text-align: left; padding-left: 2em;">
+                                <a href="/problem/olp_kc24_credit">Olympic Sinh Viên 2024 - Không chuyên - Đăng ký học phần</a>
+                        </td>
+                        <td> 1.0 </td>
+                        <td> 1G </td>
+                            <td>100</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 1em;">2</td>
+                        <td style="text-align: left; padding-left: 2em;">
+                                <a href="/problem/olp_kc24_path">Olympic Sinh Viên 2024 - Không chuyên - Đường đi</a>
+                        </td>
+                        <td> 1.0 </td>
+                        <td> 1G </td>
+                            <td>100</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 1em;">3</td>
+                        <td style="text-align: left; padding-left: 2em;">
+                                <a href="/problem/olp_kc24_prime">Olympic Sinh Viên 2024 - Không chuyên - Ba số nguyên tố</a>
+                        </td>
+                        <td> 1.0 </td>
+                        <td> 1G </td>
+                            <td>100</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 1em;">4</td>
+                        <td style="text-align: left; padding-left: 2em;">
+                                <a href="/problem/olp_kc24_string">Olympic Sinh Viên 2024 - Không chuyên - Đố vui</a>
+                        </td>
+                        <td> 1.0 </td>
+                        <td> 1G </td>
+                            <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="button" style="width: fit-content" href="/contest/olp_kc24/all">Tất cả bài tập</a>
+        </div>
+
+    <div class="content-description">
+            <p>Olympic Sinh viên 2024 - Khối Không chuyên</p>
+
+    </div>
+
+    <hr>
+    <span class="social">
+        <div class="facebook-this">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//oj.vnoi.info/contest/olp_kc24" class="" target="_blank"><i class="fa fa-facebook-official"></i></a>
+</div>
+
+        <div class="tweet-this">
+    <a href="https://twitter.com/intent/tweet?text=VNOJ%3A%20https%3A//oj.vnoi.info/contest/olp_kc24" class="meta-act-link meta-tweet " target="_blank"><i class="fa fa-twitter"></i></a>
+</div>
+
+    </span>
+
+
+        <div id="comments" data-comments-url="/contest/olp_kc24/comments"
+             data-comments-trigger="auto"
+             data-comments-preloaded="false">
+                <div class="comments-loading">Đang tải...</div>
+        </div>
+
+    <div style="clear: both;"></div>
+</div>
+    </main>
+
+
+<script type="text/javascript" src="/static/mathjax_config.c726bf5a75a7.js"></script>
+<script type="text/javascript" src="/static/vnoj/mathjax/3.2.0/es5/tex-chtml.min.326ccbf48d57.js"></script>
+<script type="text/javascript">
+    MathJax.typesetPromise().then(function () {
+        $('.tex-image').hide();
+        $('.tex-text').show();
+    });
+</script>
+    <footer>
+        <span id="footer-content">
+            <br>
+            dựa trên nền tảng <a style="color: #808080" href="https://dmoj.ca"><b>DMOJ</b></a> |
+            theo dõi VNOI trên <a style="color: #808080" href="https://github.com/VNOI-Admin/OJ"><b>Github</b></a> và <a style="color: #808080" href="https://www.facebook.com/vnoi.wiki"><b>Facebook</b></a>
+            <form id="set_language" action="/i18n/setlang/" method="post" style="display: inline">
+<input type='hidden' name='csrfmiddlewaretoken' value='kqIESAdQxFrA6dtVwDcQ1BqqQy3ry2IMbgOQn7fvKuJr2Rrs6c9Z4sdylk3KgMc4' />            <input name="next" type="hidden" value="/contest/olp_kc24">
+            <input name="language" type="hidden" value="vi">
+          </form>
+            <form id="set_theme" action="/set-theme/" method="post" style="display: inline">
+<input type='hidden' name='csrfmiddlewaretoken' value='kqIESAdQxFrA6dtVwDcQ1BqqQy3ry2IMbgOQn7fvKuJr2Rrs6c9Z4sdylk3KgMc4' />                <input name="next" type="hidden" value="/contest/olp_kc24">
+                <input name="theme" type="hidden" value="auto">
+            </form>
+        </span>
+    </footer>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5a46017d8638539',t:'MTc5NDY0MjEwMw=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5a46017d8638539',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

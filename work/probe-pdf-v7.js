@@ -1,0 +1,1 @@
+﻿const p=require('./olp-vscode/pdf-map');p.extract('outputs/De-OLP-2024-Khong-chuyen.pdf').then(pages=>{console.log(pages.map(p=>[p.number,p.lines.filter(l=>/^\s*(bài|problem)/iu.test(l))]));require('fs').writeFileSync('work/pdf-pages-test.json',JSON.stringify(pages,null,2));}).catch(e=>{console.error(e);process.exitCode=1;});

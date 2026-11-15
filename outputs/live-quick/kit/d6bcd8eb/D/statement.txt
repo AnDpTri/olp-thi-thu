@@ -1,0 +1,31 @@
+[Trang 1]
+Bài 1. ĐỐ VUI (100 điểm)
+An, Bình và Cường đang chuẩn bị một trò chơi đố vui với chuỗi dành cho bạn. Bạn An ghi một
+chuỗi ký tự s lên giấy và đưa cho bạn Bình. Bạn Bình cầm mảnh giấy và ghi thêm một lần nữa
+chuỗi s vào phía sau tạo thành chuỗi t. Sau đó, bạn Cường cầm mảnh giấy và viết thêm một ký tự
+vào một vị trí bất kỳ trong chuỗi t (có thể ở đầu, ở cuối hoặc ở vị trí xen giữa chuỗi t) tạo thành
+chuỗi z. Bạn Cường sau đó đưa mảnh giấy cho bạn và đố bạn đoán được chuỗi s ban đầu mà bạn
+An đã ghi vào mảnh giấy là gì.
+Yêu cầu: Cho chuỗi z được tạo ra từ trò chơi trên, bạn hãy tìm chuỗi s ban đầu.
+Dữ liệu: Vào từ thiết bị vào chuẩn theo dạng:
+• Dòng đầu tiên chứa số nguyên n - độ dài của chuỗi z (2 ≤ n ≤ 2 × 10^{6} + 1);
+• Dòng thứ hai chứa chuỗi z gồm các chữ cái latin in hoa.
+Kết quả: Ghi ra thiết bị ra chuẩn chuỗi s ban đầu tìm được. Tuy nhiên, trong trường hợp không
+có chuỗi s thoả mãn, in “No Solution”, hoặc trong trường hợp có nhiều chuỗi s thoả mãn, in
+“Multiple Solutions”.
+Ví dụ mẫu:
+Dữ liệu vào Kết quả
+9 ABCD
+ABUCDABCD
+10 No Solution
+HELLOWORLD
+9 Multiple Solutions
+GKGKGKGKG
+Trang 1/4
+
+[Trang 2]
+Ràng buộc:
+• Subtask 1 (20% số điểm): n = 7;
+• Subtask 2 (30% số điểm): 2 ≤ n ≤ 2001;
+• Subtask 2 (50% số điểm): Không có ràng buộc gì thêm.
+Trang 2/4

@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 2,
+  "extensionVersion": "0.7.0",
+  "synthetic": true,
+  "legacy": false,
+  "missingData": [],
+  "session": {
+    "id": "synthetic-session",
+    "limitMs": 10800000,
+    "elapsedMs": 30000,
+    "startedAt": "2026-11-15T02:00:00.000+07:00",
+    "endedAt": "2026-11-15T02:00:30.000+07:00",
+    "endReason": "manual"
+  },
+  "contest": {
+    "title": "SYNTHETIC OLP demonstration"
+  },
+  "problems": [
+    {
+      "sourceFile": "A/A.cpp",
+      "key": "A",
+      "name": "Synthetic addition",
+      "vnojCode": "synthetic-addition",
+      "url": "https://oj.vnoi.info/problem/synthetic-addition",
+      "originalHeading": "Problem A",
+      "originalNumber": "A",
+      "language": "C++",
+      "finalVerdict": "AC",
+      "bestScore": null,
+      "accepted": true,
+      "submissionsCount": 1,
+      "pages": {
+        "key": "A",
+        "start": 1,
+        "top": 34,
+        "name": "Synthetic addition",
+        "heading": "Problem A",
+        "headingNumber": "A",
+        "assignment": "automatic",
+        "end": 1,
+        "bottom": null,
+        "confidence": "title-heading"
+      },
+      "statement": {
+        "source": "problems/A/statement.pdf",
+        "pages": {
+          "start": 1,
+          "end": 1
+        },
+        "crop": {
+          "top": 34,
+          "bottom": null,
+          "units": "PDF points; viewport scale 1, top origin; top applies first page, bottom last page"
+        },
+        "confidence": "title-heading",
+        "assignment": "automatic",
+        "originalHeading": "Problem A",
+        "originalNumber": "A",
+        "commonPages": null,
+        "warning": null
+      },
+      "samples": [
+        {
+          "n": 1,
+          "samplesSource": "user-added",
+          "verified": false,
+          "provenance": null,
+          "originalHashes": null,
+          "hashes": {
+            "in": "5cfee54fb9d90cc92ad31d350e2e424748d0693fc1568a9570e8ad2aca2905e7",
+            "out": "084c799cd551dd1d8d5c5f9a5d593b2e931f5e36122ee5c793c1d08a19839cc0"
+          },
+          "in": {
+            "path": "problems/A/samples/mau-1.in",
+            "bytes": 5,
+            "state": "stored"
+          },
+          "out": {
+            "path": "problems/A/samples/mau-1.out",
+            "bytes": 3,
+            "state": "stored"
+          },
+          "matchesImported": null
+        }
+      ],
+      "files": {
+        "A.cpp": {
+          "path": "problems/A/solution.cpp",
+          "bytes": 124,
+          "state": "stored"
+        },
+        "input.txt": {
+          "path": "problems/A/input.txt",
+          "bytes": 5,
+          "state": "stored"
+        },
+        "output.txt": {
+          "path": null,
+          "bytes": 0,
+          "state": "empty"
+        }
+      }
+    }
+  ],
+  "timezone": "Asia/Saigon",
+  "utcOffsetMinutes": 420,
+  "integrity": {
+    "ok": true,
+    "divergences": [],
+    "missing": [],
+    "recoveredTails": []
+  },
+  "artifacts": {
+    "A/runs/1/stdin.txt": {
+      "path": "problems/A/runs/run-001-input-OK/stdin.txt",
+      "bytes": 5,
+      "state": "stored"
+    },
+    "A/runs/1/stdout.txt": {
+      "path": "problems/A/runs/run-001-input-OK/stdout.txt",
+      "bytes": 3,
+      "state": "stored"
+    },
+    "A/runs/1/stderr.txt": {
+      "path": null,
+      "bytes": 0,
+      "state": "empty"
+    },
+    "A/runs/1/compile.txt": {
+      "path": "problems/A/runs/run-001-input-OK/compile.txt",
+      "bytes": 35,
+      "state": "stored"
+    },
+    "A/runs/1/meta.json": {
+      "path": "problems/A/runs/run-002-sample-1-AC/meta.json",
+      "bytes": 924,
+      "state": "stored"
+    },
+    "A/submissions/1000/meta.json": {
+      "path": "problems/A/submissions/1000/meta.json",
+      "bytes": 131,
+      "state": "stored"
+    },
+    "A/submissions/1000/source.cpp": {
+      "path": "problems/A/submissions/1000/source.cpp",
+      "bytes": 124,
+      "state": "stored"
+    }
+  },
+  "limitations": [
+    "Self-recorded interaction proxies, not proof of attention.",
+    "PNG pages are authoritative; PDF text is a convenience.",
+    "Older sessions have no edit history before 0.7.0.",
+    "Crash/closed-window gaps counted outside with unknown activity."
+  ],
+  "files": [
+    {
+      "path": "README_AGENT.md",
+      "bytes": 2687,
+      "sha256": "b160955a9b9859c4a2bb6870f57fbd715f56b8e2c009d445e21eb570c0277512",
+      "description": "README_AGENT.md"
+    },
+    {
+      "path": "SCHEMA.md",
+      "bytes": 14709,
+      "sha256": "c6c7ba4fc262c9de2ef8edfc07c555826cedba1975d86770b212d1fe824fd98e",
+      "description": "SCHEMA.md"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 6211,
+      "sha256": "fae052982bec2a4fbfd86eff453cc86854e0d477ec779760335ddf960f8cbc83",
+      "description": "summary.json"
+    },
+    {
+      "path": "summary.md",
+      "bytes": 1563,
+      "sha256": "1c3ac7a198ea30daac9648893b7b2b1c1fd094651fea6e0189f498e4fc6b3922",
+      "description": "summary.md"
+    },
+    {
+      "path": "report.md",
+      "bytes": 3418,
+      "sha256": "6fceaf0001537702c32b969aa33483be455ee2d109a2c0efb9e4915233e4e58f",
+      "description": "report.md"
+    },
+    {
+      "path": "timeline/events.jsonl",
+      "bytes": 4522,
+      "sha256": "fc511236c6454241e83bb4ecb975dc70d0ca93e79a4dc58ce1ad28446c68d5fc",
+      "description": "timeline"
+    },
+    {
+      "path": "timeline/edits.jsonl",
+      "bytes": 2165,
+      "sha256": "2bd5412ac4b93d0c5ff06920e8223144f0235444831edbb3d36594307a74e1ae",
+      "description": "timeline"
+    },
+    {
+      "path": "timeline/snapshots.jsonl",
+      "bytes": 3003,
+      "sha256": "03b855af43f4e514ec5adf004973618300c7deb226f2620b5e3db916337e4e3b",
+      "description": "timeline"
+    },
+    {
+      "path": "timeline/blobs/4b08afe59ec6141c6c3dfd6202d312fd0f839b9ce3b637c6764662fd6f436f8a",
+      "bytes": 14,
+      "sha256": "4b08afe59ec6141c6c3dfd6202d312fd0f839b9ce3b637c6764662fd6f436f8a",
+      "description": "timeline"
+    },
+    {
+      "path": "timeline/blobs/5cfee54fb9d90cc92ad31d350e2e424748d0693fc1568a9570e8ad2aca2905e7",
+      "bytes": 5,
+      "sha256": "5cfee54fb9d90cc92ad31d350e2e424748d0693fc1568a9570e8ad2aca2905e7",
+      "description": "timeline"
+    },
+    {
+      "path": "timeline/blobs/16036a3bde21c3ecdbc4e7df9a7593666a4389bb110e0ba2e0832547b07df856",
+      "bytes": 124,
+      "sha256": "16036a3bde21c3ecdbc4e7df9a7593666a4389bb110e0ba2e0832547b07df856",
+      "description": "timeline"
+    },
+    {
+      "path": "timeline/timeline.md",
+      "bytes": 2009,
+      "sha256": "93e35c7b73ef9c894645ee217e9c6293332bc43d32de0442230111857f7dd3d0",
+      "description": "timeline"
+    },
+    {
+      "path": "problems/A/statement.pdf",
+      "bytes": 725,
+      "sha256": "61b1527374a74082c2f242b0b55bd9e0b631dd10c3312831bbe700eaeccce908",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/solution.cpp",
+      "bytes": 124,
+      "sha256": "16036a3bde21c3ecdbc4e7df9a7593666a4389bb110e0ba2e0832547b07df856",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/input.txt",
+      "bytes": 5,
+      "sha256": "5cfee54fb9d90cc92ad31d350e2e424748d0693fc1568a9570e8ad2aca2905e7",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/statement.json",
+      "bytes": 402,
+      "sha256": "fc0b606a53e172771ea852d130a8cdb8f05a6934058b933676a6085c8ae61ec5",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/statement.txt",
+      "bytes": 131,
+      "sha256": "76046b9185c4a5deb6cab89ead87d251dbc505107099afb83037a641d9af6887",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/statement-pages/page-1.png",
+      "bytes": 55699,
+      "sha256": "639100385305e737e140856baef693f5ff24dc2b976de12410cb15e537783a0d",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/samples/mau-1.in",
+      "bytes": 5,
+      "sha256": "5cfee54fb9d90cc92ad31d350e2e424748d0693fc1568a9570e8ad2aca2905e7",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/samples/mau-1.out",
+      "bytes": 3,
+      "sha256": "084c799cd551dd1d8d5c5f9a5d593b2e931f5e36122ee5c793c1d08a19839cc0",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/samples/meta.json",
+      "bytes": 621,
+      "sha256": "da1b6c9b19797b2bf2892ccdfda2aa3b3ef75f818b3e92d4fc7fb523519d6d5c",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/code-history/snapshots/001-0-start.cpp",
+      "bytes": 14,
+      "sha256": "4b08afe59ec6141c6c3dfd6202d312fd0f839b9ce3b637c6764662fd6f436f8a",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/code-history/diffs/001.diff",
+      "bytes": 59,
+      "sha256": "dbcc920f5f7e21acdcf0da21c3d02439e67323d07bf485c32cc14a2380e0db09",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/code-history/snapshots/002-7000-run.cpp",
+      "bytes": 124,
+      "sha256": "16036a3bde21c3ecdbc4e7df9a7593666a4389bb110e0ba2e0832547b07df856",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/code-history/diffs/002.diff",
+      "bytes": 188,
+      "sha256": "bb6a167961d56ee0952621edcb26c643de2655b4b34c8bdfd6601bd1d2edfedb",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/code-history/index.md",
+      "bytes": 290,
+      "sha256": "b21176d799ee6bcbfb8da1664f17c1272ce5d2b19321e620276d4c4cef72d4ab",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/worklog.md",
+      "bytes": 1861,
+      "sha256": "68b6cd2218cc5a23c92ba0a682158ab70aac6c0adf8b9e6ec38d3a4a93c7db59",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/runs/run-001-input-OK/stdin.txt",
+      "bytes": 5,
+      "sha256": "5cfee54fb9d90cc92ad31d350e2e424748d0693fc1568a9570e8ad2aca2905e7",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/runs/run-001-input-OK/stdout.txt",
+      "bytes": 3,
+      "sha256": "084c799cd551dd1d8d5c5f9a5d593b2e931f5e36122ee5c793c1d08a19839cc0",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/runs/run-001-input-OK/compile.txt",
+      "bytes": 35,
+      "sha256": "ed89b20783c5dec53ce4f94640d3edd1847dd3f8e4bc2ba5287fb0141c30ea81",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/runs/run-001-input-OK/meta.json",
+      "bytes": 929,
+      "sha256": "289eda703b8c6590af8b43eb8070c9a7f0a86cdc14d512cdbdf627056faa33bc",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/runs/run-002-sample-1-AC/meta.json",
+      "bytes": 924,
+      "sha256": "de5f5253ede88c84f8f8c4aae67e38765a75d91a93f8021b64040ce0f3959b48",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/submissions/1000/meta.json",
+      "bytes": 131,
+      "sha256": "3beafcbf0d6cb2bbca9bddfa856fe1daf6f0d4fcaf9b2470280e037ff6847c80",
+      "description": "problems"
+    },
+    {
+      "path": "problems/A/submissions/1000/source.cpp",
+      "bytes": 124,
+      "sha256": "16036a3bde21c3ecdbc4e7df9a7593666a4389bb110e0ba2e0832547b07df856",
+      "description": "problems"
+    },
+    {
+      "path": "tools/replay.js",
+      "bytes": 4153,
+      "sha256": "63ea07010a0fe9c3db0a6f70abbc257cd5fad054ad5617c4e6731612ce88f773",
+      "description": "tools"
+    },
+    {
+      "path": "tools/replay.py",
+      "bytes": 5299,
+      "sha256": "814d8fa873ae52d723fb6db5d40927a14416d3bad6e2e0d21da2f03560be30b1",
+      "description": "tools"
+    }
+  ]
+}

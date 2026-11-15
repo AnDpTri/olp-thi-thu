@@ -1,0 +1,26 @@
+{
+  "samples": [
+    {
+      "n": 1,
+      "samplesSource": "user-added",
+      "verified": false,
+      "provenance": null,
+      "originalHashes": null,
+      "hashes": {
+        "in": "5cfee54fb9d90cc92ad31d350e2e424748d0693fc1568a9570e8ad2aca2905e7",
+        "out": "084c799cd551dd1d8d5c5f9a5d593b2e931f5e36122ee5c793c1d08a19839cc0"
+      },
+      "in": {
+        "path": "problems/A/samples/mau-1.in",
+        "bytes": 5,
+        "state": "stored"
+      },
+      "out": {
+        "path": "problems/A/samples/mau-1.out",
+        "bytes": 3,
+        "state": "stored"
+      },
+      "matchesImported": null
+    }
+  ]
+}

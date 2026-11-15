@@ -1,0 +1,60 @@
+﻿OLP Thi thử 0.7.0 — supervisor round1 fixes / round2 handoff
+
+Rebuilt package: outputs\olp-thi-thu-0.7.0.vsix
+SHA256: 8926e2b9d04be658e463e941552c785eb4bd84cc212ff251bdcefa38d347aada
+Synthetic package regenerated: outputs\sample-export-0.7.0\ and outputs\sample-export-0.7.0.zip (61675 bytes).
+Ordered commands, expected lines and logs: work\HOST-TESTS.md.
+All original round1 logs/directories remain untouched.
+
+1. v7-main — PRODUCT BUG
+Preserved kit pages.json for OLP-3f17ecfd contains, for A/B/C/D:
+  warning: Không tách được PDF: document is not defined
+All four downloaded PDFs are present; A/De-bai.pdf is the correct 308880-byte file. Thus this was not missing downloads, an unawaited quick command or shared URL deduplication. PDF.js selected a browser-dependent backend in the Electron extension host. Its bundled environment test explicitly treats some Electron process types as non-Node. The caught extraction failure left pages undefined.
+Fix: PDF extraction/preparation/rasterization in Electron now runs through pdf-task.js in an awaited Node-mode helper (ELECTRON_RUN_AS_NODE=1, OLP_PDF_WORKER=1). It reads only local PDF assets; no cookie, fetcher or request headers are passed. The helper returns prepared metadata before installation/quick completes, and closes its IPC channel on completion. Node-only pure execution remains direct; offline kits without PDFs do not require the helper. Existing statement worker also explicitly uses Node mode.
+New unit coverage checks awaited Electron routing and the actual helper's Node-mode spawn configuration without spawning in the sandbox.
+
+2. v7-crash — TEST BUG, NOT LOST JOURNAL DATA
+Directly inspected the original single session .olp\13df2830\edits.jsonl. All 23 characters of // unsaved-before-kill plus newline are present as individual insert events (seq 152–174). The resumed log uses the same session directory. At seq 178 it explicitly records an external replacement back to the saved editor file, including the unsaved marker in removedText. The previous assertion incorrectly required the whole marker to appear in one inserted-text field.
+Read-only replay of the preserved evidence through seq 174 reproduces the complete unsaved marker, and all preserved snapshots verify.
+Fix: before kill, the host test verifies replay against the actual editor buffer and saves session id / last sequence / expected text. After reopening, it checks the same session id and reconstructs through that exact sequence; it also continues editing and verifies the final exported archive. No debounce/flush behavior was weakened or changed.
+Actual local result: preserved crash evidence replay PASS: unsaved marker intact across character events, same session, snapshots valid.
+
+3. practice — NETWORK RESILIENCE GAP + TEST RELOAD RACE
+Run1's original transport cause cannot be determined: the old log recorded only fetch failed, without error.cause.code. There is no evidence that the origin guard rejected this HTTPS contest URL. Production idempotent GETs now retry once on connection failures, AbortError/TimeoutError or HTTP 5xx, with a fresh 20-second deadline. Origin/auth redirects, size failures and invalid URLs are not retried as transient failures. The final error includes the pathname and underlying cause code; authentication headers/cookies are never logged. submit.js and POST behavior are unchanged.
+The practice suite now uses a local public-contest/PDF fixture and injects one ECONNRESET, strictly checking exactly two contest GET attempts. The runner prints a method/path/status/cause-only GET trace. It no longer depends on live public pages.
+Run2's preserved B/output.txt contains 107 newline. Its edit log has the subsequent document reload containing 107 newline at version 3. The failed immediate assertion observed version 2 before VS Code's asynchronous reload. The test now waits (bounded to 5 seconds) for that actual buffer value, retaining the strict content assertion.
+
+UI findings addressed
+(a) PRODUCT/UI: sample diff opens explicitly in group 1, the wide left group. Host test asserts its group.
+(b) CAPTURE TEST + PRODUCT COMFORT: link-selection capture formerly pressed Enter before capturing, and ready waited only for kit metadata. The capture now photographs the actual link picker before Enter, then waits for visible ready-prompt text. The existing start question is now a persistent modal. The isolated screenshot profile uses custom workbench dialogs, so CDP captures it. Escape dismisses it after both sizes, followed by a separate ready-working-view capture. The capture fails on identical ready/link PNG bytes and writes per-scene expected-text/hash records to capture-audit.jsonl.
+(c) PRODUCT/UI: journal defaults to collapsed, with a stable id so explicit user expansion is remembered.
+(d) REQUESTED HEADER FEATURE: source page range, focus-derived live reading time and fallback Gán trang đề button. Reading excludes idle and window blur. New model tests cover displayed metadata, reading updates and assignment action dispatch.
+
+Failure diagnostics
+Every assertion failure in olp-integration-v7 now writes/prints: failing step, complete kit/problem metadata, selected session id, session log path and directory listing, last 20 lines of both events.jsonl and edits.jsonl, errors/warnings and tab state. These go into the result file and supervisor log. Round1 evidence was inspected read-only, not altered.
+
+Actual sandbox verification on final code
+- HOST unit-v7 PASS
+  - layout-view model PASS 7
+  - process-boundary PASS 10
+  - v7 pure PASS 12
+- HOST replay PASS
+  - Python independent ZIP + replay PASS
+  - JS replay verified, Windows tar listed the ZIP, Python zipfile verified CRC/UTF-8/large entry/manifest hashes/replay.
+- HOST unit-submit PASS
+  - tất cả 15 kiểm thử đạt
+- core --pure: tất cả 10 kiểm thử đạt
+  - NOT RUN: 9 process execution checks (--pure)
+- JavaScript syntax PASS 44 files
+- PowerShell syntax PASS 8 runners
+- Python replay syntax PASS
+- final VSIX/source integrity PASS; submit.js byte-identical to 0.5.1 PASS
+
+Supervisor rerun priorities
+Use the new ordered list in work\HOST-TESTS.md:
+unit-v7, replay, v7-main, v7-crash, practice, shots-main, shots-quick; then remaining regression commands (unit-submit, unit-core, submit, live-mock, v6-main, v6-migrate, shots-urgent).
+View the new main/quick PNGs at both sizes: wide diff, collapsed journal, statement range/clock/assignment button, visible persistent ready prompt, distinct link picker and final working view. Review capture-audit.jsonl alongside the images.
+No VS Code instance or piped helper was launched in the sandbox this round; true Electron execution, OS focus and new screenshots remain supervisor acceptance items. Existing round1 PASS results are not claimed as passes for the rebuilt package.
+
+Constraints
+No production login/POST, no credentials inspected, no new network destination, no installs/profile changes to the user's VS Code, no live script, no sub-agents, no git initialization and no deletion of leftovers. submit.js is unchanged. All source/artifact edits stayed inside the project root.

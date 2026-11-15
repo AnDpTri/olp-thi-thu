@@ -1,0 +1,1 @@
+﻿const {extract,detect}=require('./olp-vscode/pdf-map');extract('outputs/De-OLP-2024-Khong-chuyen.pdf').then(pages=>console.log(JSON.stringify(detect(pages,[['A','Đăng ký học phần'],['B','Đường đi'],['C','Ba số nguyên tố'],['D','Đố vui']].map(([key,name])=>({key,name}))),null,2))).catch(console.error);

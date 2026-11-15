@@ -1,0 +1,44 @@
+{
+  "exit": 0,
+  "status": "OK",
+  "ms": 12,
+  "command": "A.exe",
+  "refs": {
+    "stdin": {
+      "path": "problems/A/runs/run-001-input-OK/stdin.txt",
+      "bytes": 5,
+      "state": "stored"
+    },
+    "stdout": {
+      "path": "problems/A/runs/run-001-input-OK/stdout.txt",
+      "bytes": 3,
+      "state": "stored"
+    },
+    "stderr": {
+      "path": null,
+      "bytes": 0,
+      "state": "empty"
+    }
+  },
+  "seq": 30,
+  "t": 7400,
+  "ts": "2026-11-15T02:00:07.400+07:00",
+  "type": "run",
+  "problem": "A",
+  "compile": {
+    "sourceHash": "16036a3bde21c3ecdbc4e7df9a7593666a4389bb110e0ba2e0832547b07df856",
+    "ok": true,
+    "ms": 300,
+    "diagnostics": [],
+    "seq": 27,
+    "t": 7300,
+    "ts": "2026-11-15T02:00:07.300+07:00",
+    "type": "compile_result",
+    "problem": "A",
+    "output": {
+      "path": "problems/A/runs/run-001-input-OK/compile.txt",
+      "bytes": 35,
+      "state": "stored"
+    }
+  }
+}

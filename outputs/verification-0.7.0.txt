@@ -1,0 +1,53 @@
+OLP Thi thử 0.7.0 — local verification and supervisor handoff
+
+Deliverables:
+- work\olp-vscode\ (CommonJS sources, no new npm runtime dependency)
+- outputs\olp-thi-thu-0.7.0.vsix
+- work\HOST-TESTS.md (ordered exact PowerShell commands, log paths, expected lines, screenshot checklist)
+- outputs\sample-export-0.7.0\ and outputs\sample-export-0.7.0.zip (clearly SYNTHETIC, generated through Recorder + exportSession)
+
+Implemented:
+- Working layout is only code left, input/output right. Statement command toggles to a full-editor statement and back; cached webviews retain context. Stale async renders cannot steal later focus.
+- Shared PDF mapping uses text heading positions, including intra-page boundaries. Real 2024 mapping: A pages 3–4; B starts lower on page 5 and continues through 7; C upper page 5; D pages 1–2; common instructions above D on page 1. Metadata persists in workspace state and kit/pages.json. Unknown mappings show full PDF and manual page assignment. Per-problem text AND pre-rendered PNGs are saved and exported; original PDF remains intact with crop metadata.
+- Quick start defaults to remembered C++ without another language prompt, asks cookie only if needed, verifies stored session, retries public import GETs with cookie on failure/login-required. All import URLs and redirects are guarded to the same HTTPS origin; submit.js POST behavior is unchanged.
+- HTML samples support Input/Output, Sample Input/Output, sample-input/output containers and entity/whitespace preservation. PDF samples require a strict unambiguous numeric structure, are labelled unverified and never gate submission.
+- Append-only events/edits/snapshot JSONL, per-record fsync, content-addressed snapshots, torn-tail recovery, resume, kit-only edit/save tracking, undo/redo, paste-like insertion flags, throttled selection/page-view events and external-change audit. Checkpoints compare actual editor buffers to the edit model; gaps become explicit divergences in the manifest.
+- Focus/visibility/window state and idle detection define observed reading/coding/testing/other/none/outside/idle intervals. No screen recording, OS keyboard monitoring, outside-file content, clipboard scraping, cookies or authentication headers enter recording.
+- Automatic milestones and labelled Ctrl+Alt+M laps, stuck marks/notes, existing run/samples/submit/scoreboard/timer/template/report features retained. Recorded run artifacts include stdin/stdout/stderr/compile output and metadata; large streams retain head/tail with truncation flags and original byte counts. Submitted sources are retained before the POST attempt and by final submission id.
+- Pure-Node ZIP writer (deflate, CRC32, UTF-8), automatic/manual export with path-copy and reveal-folder notification. ZIP includes agent instructions, manifest/file hashes/integrity, summary metrics, human report, raw/merged timelines, source history/diffs, problem statements/samples/runs/submissions, and dependency-free JS/Python replay tools. Verification uses a single replay pass per file rather than replaying the entire edit history for every checkpoint.
+- Fixed 0.6 host origin assertion by attributing only stacks through extension networking modules. No external-service allowlist was added. Extension traffic remains restricted to oj.vnoi.info; mock test traffic is redirected locally at the test boundary.
+
+Actual local result lines:
+- HOST unit-submit PASS; inner: tất cả 15 kiểm thử đạt.
+- HOST unit-v7 PASS; inner: layout-view model PASS 6; process-boundary PASS 10; v7 pure PASS 10.
+- HOST replay PASS; inner: replay.js VERIFY PASS; Python independent ZIP + replay PASS.
+- Direct Python replay CLI: replay.py VERIFY PASS (also rerun on final exported sample).
+- Core --pure: tất cả 10 kiểm thử đạt; NOT RUN: 9 process execution checks (--pure).
+- JavaScript syntax PASS 43 files.
+- PowerShell syntax PASS 8 runners.
+- Python replay syntax PASS.
+- Windows system tar successfully listed the synthetic ZIP. Python zipfile independently verified CRC, UTF-8 names, 5 MB test entry, every manifest hash/size and replay equivalence.
+- VSIX integrity PASS; final root sources match; submit.js byte-identical to 0.5.1.
+
+Final VSIX SHA256:
+86d688715b1182840ccf7c617d933a9f0c2e87e8d86bd22310596e187717a6f8
+
+PDF inspection performed here:
+- Native direct rendering succeeded using the already bundled renderer; no subprocess was needed.
+- Viewed the actual generated C/page-5.png and B/page-5.png. C includes its complete statement/sample/constraints and stops before the B heading. B begins cleanly with its own heading and contains no C content. These were statement assets, NOT screenshots of VS Code.
+
+Awaiting supervisor:
+- All real VS Code host suites, full 19-check compiler/runner suite on 0.7.0, real editing/focus/idle/page messages, submission journey, automatic export, kill/reopen continuity, old-state restore and the screenshot matrix in HOST-TESTS.md.
+- No VS Code instance was launched in this round. The known sandbox restrictions are unchanged. Existing 0.6 supervisor results were used as evidence only for 0.6, not as proof that 0.7 host/UI behavior passes.
+- Screenshot runners write descriptive PNGs at 1366x768 and 1920x1080 under outputs\screenshots-0.7.0\. The quick-cookie screenshot uses the real empty cookie box, then cancels; subsequent quick import uses a synthetic stored session redirected to the mock. Every runner closes only its own isolated profile and exits nonzero on failure.
+
+Known limitations:
+- Export preserves the original PDF rather than rewriting PDF objects into new split PDFs. Correct cropped page PNGs, per-problem text, page boundaries and crop coordinates provide the separate statements.
+- Manual page assignment is page-granular; automatic matching handles the real shared page-5 boundary.
+- HTML parsing supports common explicit sample markup; unusual markup needs Companion/manual samples. Most PDF table layouts are deliberately not inferred from ambiguous flattened text.
+- Idle/blur are interaction proxies, not attention measurements. Closed/crashed intervals have unknown real activity and are counted outside with a recording_gap marker. Pre-upgrade history cannot be reconstructed.
+- Whole-file unified history diffs prioritize correctness over minimal hunks. Full lossless text edits/snapshots can make unusually large-output sessions exceed the normal low-tens-of-MB goal; artifacts themselves are capped.
+- Existing compiler cache does not track header dependencies; delete .stamp after header changes. Windows taskkill denial falls back to killing the owned direct child, without a guarantee about grandchildren.
+- Actual host behavior, UI readability and crash acceptance remain unverified until supervisor results arrive.
+
+No git initialization, sub-agents, installation into the user's VS Code, production sign-in/submission, credential lookup, new production destination or deletion of old leftovers. vnoj.js has only the sanctioned guarded GET extension; submit.js is unchanged.

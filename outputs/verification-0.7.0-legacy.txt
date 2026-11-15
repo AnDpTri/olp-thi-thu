@@ -1,0 +1,61 @@
+0.7.0 legacy-history follow-up after supervisor round 5
+
+Root cause: olp.history bypassed reportText and directly called the old
+timer.markdown renderer, producing seconds instead of the strict .000 format.
+Separately, the new observation-only fallback treated an unrecorded old session
+as unassigned time and lost its per-problem/phase allocation. This was a product
+behaviour gap; the failing regex was NOT loosened.
+
+Fixes:
+- History reads the selected session's own detailed logs and uses the canonical
+  report renderer, rather than the currently running session's recorder.
+- Without detailed coverage, old focus/phase journal intervals reproduce the
+  old per-problem allocation. Reports explicitly say:
+  phien cu - khong co nhat ky chi tiet (Vietnamese accents/en dash in actual UI).
+- True elapsed and limit come from original start/end/deadline. Unknown legacy
+  idle/outside/output-split/other-file observations are displayed as a dash, not
+  falsely measured zero. Old testing remains combined I/O.
+- Continuing old sessions combine a journal-estimated prefix with observed
+  post-upgrade intervals. A modern async startup delay is not labelled legacy.
+- History copy/export target the viewed session. Historical export uses a local
+  recorder view and never replaces or ends the active recording.
+- Legacy ZIP: legacy=true, missingData, original legacy-journal.jsonl, old
+  timing/results. Unknown historical source/input/output are unavailable rather
+  than copied from today's kit files. Post-session snapshots are not labelled
+  session-end source. Integrity verification remains valid for present evidence.
+
+Tests:
+- Strict v6-migrate assertion remains 00:02:00.000 / 03:00:00.000 and prints the
+  full actual report on failure. It now checks A total/coding 00:01:00.000,
+  legacy label, no NaN, unknown idle/outside, history clipboard, valid legacy ZIP,
+  preserved journal, missing source and continued live edit capture afterward.
+- Pure test checks old elapsed/limit and all three old phases against timer.stats,
+  legacy ZIP/replay validity, no invented historical source, postdated snapshots,
+  mixed old/new coverage, and modern startup classification.
+- Python independently verifies the legacy archive and rejects absent text replay.
+
+Actual local results:
+HOST unit-v7 PASS
+  layout-view model PASS 9
+  process-boundary PASS 10
+  v7 pure PASS 17
+HOST replay PASS
+  replay.js VERIFY PASS
+  Python independent ZIP + replay PASS
+  Python legacy archive VERIFY PASS
+HOST unit-submit PASS (all 15)
+Core --pure: all 10; NOT RUN: 9 process execution checks (--pure)
+JavaScript syntax PASS 40 files
+PowerShell syntax PASS 8 runners
+Python syntax PASS
+Protected submit.js/vnoj.js/imports.js unchanged; submit.js identical to 0.5.1
+VSIX source integrity PASS
+
+Rebuilt outputs/olp-thi-thu-0.7.0.vsix
+SHA256 c629360472a0b313c27aa7f209d6b6b592ddd354c1374c54e89d6273d89f5cb2
+Synthetic sample ZIP/unpacked export regenerated. HOST-TESTS.md/README/SCHEMA
+updated. Earlier e2e directories and round logs remain untouched.
+
+Await supervisor: unit-v7, replay, v6-migrate first, then remaining commands in
+HOST-TESTS.md. Real VS Code/compile/UI tests were not launched in this sandbox.
+The thirteen round-5 PASS results apply to the preceding package.

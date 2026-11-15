@@ -1,0 +1,66 @@
+0.7.0 supervisor round 3 follow-up
+
+v6-main: TEST TARGET REGRESSION, confirmed from preserved evidence.
+work/e2e-324e6e9/fixture/OLP-7dcb7eb9:
+- Last A samples event seq299 was the previous 3/3 pass.
+- Focus switched to D seq302 for its no-samples action.
+- Hidden A source was edited to the loop at seq304.
+- There are NO compile_result/sample_result/samples events after seq304.
+- The final saved A source is the ordinary sum program. Its build/A.stamp
+  matches that saved source, compile flags and the actual lower-drive VS Code
+  fsPath (7f1471aa3c0337e8). The test inspected an old A tree result after an
+  unqualified command targeted D. There was no new stale A binary execution.
+Fix: setText explicitly selects/asserts each solution before WorkspaceEdit.
+The TLE step explicitly targets A and requires a new A compile event; its loop
+has volatile observable work. New compile events are checked against SHA256 of
+editor text captured before explicit run/sample commands.
+
+Additional product protection: capture command source, verify editor AND disk
+before/after compilation and between samples, reject changes instead of running
+an uncertain binary. compile_result.sourceHash identifies exact UTF-8 source.
+Cache stamps now use full SHA256 source/flags/command/cwd keys AND a SHA256 of
+the binary. Legacy or externally replaced outputs force recompilation. Boundary
+tests exercise changed source, flags, compiler, directory, binary and failures.
+
+v7-main: PRODUCT LOGGING BUG.
+Recorder.change drops empty no-op changes before modifying sequence, activity,
+milestones or log files. Mixed batches retain only meaningful changes. Applies
+to solution, input and output. Real LF output writes and generated flags remain.
+
+v7-crash: TEST EDITOR-BEHAVIOUR ARTEFACT plus explicit recovery metadata.
+Append helpers place the cursor at EOF; they verify actual editor text through
+replay, including real C++ formatting. The resumed marker has no trailing comment
+newline before code. Product resume_baseline records old/new hashes and changed;
+an explicit external replacement plus resume snapshot reconciles reopened text,
+without deleting any unsaved pre-crash history or counting rollback as typing.
+Host test asserts disk excludes unsaved marker, pre-kill replay includes it,
+baseline and resume snapshot exist, reopened replay is exact, continued actual
+editor text is exported byte-for-byte, and exported replay verification passes.
+
+Both complete host test files were reviewed for target/focus/EOL assumptions.
+v6 failures now also dump kit, active document, log directory and 20-line tails.
+HOST-TESTS.md updated: prioritize unit-v7, replay, v7-main, v6-main, v7-crash.
+
+Executed locally on final logic:
+HOST unit-v7 PASS
+  layout-view model PASS 9
+  process-boundary PASS 10
+  v7 pure PASS 15
+HOST replay PASS
+  replay.js VERIFY PASS
+  Python independent ZIP + replay PASS
+Python crash rollback archive replay PASS (historical AND reconciled final text)
+HOST unit-submit PASS / all 15 checks passed
+Core --pure: all 10 passed; NOT RUN: 9 process execution checks (--pure)
+JavaScript syntax PASS 34 files
+PowerShell runner syntax PASS
+VSIX source integrity PASS; submit.js byte-identical to 0.5.1 PASS
+
+Rebuilt outputs/olp-thi-thu-0.7.0.vsix.
+SHA256 2cd0c2c0cb3f151c3a8f90d309778763e9da248bb2472b287ef97e4369abd2a4
+Regenerated outputs/sample-export-0.7.0/ and .zip through real export code.
+
+Not executed here: VS Code host/UI, screenshots or real child-process compile.
+Await supervisor. Earlier suite passes apply to earlier packages. No installs,
+credential lookup, real VNOJ sign-in/POST, live script or sub-agents used. All
+preserved round directories/logs remain untouched.
